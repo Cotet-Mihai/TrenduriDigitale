@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx shadcn@latest init -d)",
+      "Bash(npx shadcn@latest add card badge input navigation-menu dropdown-menu avatar separator)",
+      "Bash(npm run *)",
+      "Bash(node -e \"const l = require\\('lucide-react'\\); const keys = Object.keys\\(l\\); console.log\\(keys.filter\\(k => /twitter|youtube|x$/i.test\\(k\\)\\).join\\(', '\\)\\)\")",
+      "Bash(node -e \"const l = require\\('lucide-react'\\); const keys = Object.keys\\(l\\); console.log\\(keys.filter\\(k => /linkedin|instagram|youtube|twitter|tiktok/i.test\\(k\\) && !k.startsWith\\('Lucide'\\)\\).join\\(', '\\)\\)\")",
+      "Bash(node -e \"const b = require\\('@base-ui/react/button'\\); console.log\\(Object.keys\\(b\\)\\)\")",
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "mcp__plugin_playwright_playwright__browser_take_screenshot",
+      "Bash(npx shadcn@latest add dialog)",
+      "mcp__plugin_playwright_playwright__browser_click",
+      "Bash(node -e ' *)",
+      "Bash(python3 -c \"from PIL import Image; print\\('pillow ok'\\)\")",
+      "Bash(python -c \"from PIL import Image; print\\('pillow ok'\\)\")",
+      "Bash(python *)"
+    ]
+  }
+}

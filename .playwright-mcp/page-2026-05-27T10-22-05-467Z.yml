@@ -1,0 +1,168 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - link "DigitalTrendz" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img [ref=e7]
+        - generic [ref=e9]: DigitalTrendz
+      - navigation [ref=e10]:
+        - link "Acasă" [ref=e11] [cursor=pointer]:
+          - /url: /
+        - button "Articole" [ref=e13]:
+          - text: Articole
+          - img [ref=e14]
+        - button "Categorii" [ref=e17]:
+          - text: Categorii
+          - img [ref=e18]
+        - button "Resurse" [ref=e21]:
+          - text: Resurse
+          - img [ref=e22]
+        - link "Despre" [ref=e24] [cursor=pointer]:
+          - /url: /despre
+        - link "Contact" [ref=e25] [cursor=pointer]:
+          - /url: /contact
+      - generic [ref=e26]:
+        - button [ref=e27]:
+          - img [ref=e28]
+        - button "✉ Abonează-te" [ref=e31]:
+          - generic [ref=e32]: ✉
+          - text: Abonează-te
+  - main [ref=e33]:
+    - generic [ref=e34]:
+      - generic [ref=e35]:
+        - heading "Contact" [level=1] [ref=e36]
+        - paragraph [ref=e37]: Ai o întrebare, o propunere de colaborare sau vrei să ne trimiți un articol? Scriem-ne.
+      - generic [ref=e38]:
+        - generic [ref=e39]:
+          - generic [ref=e41]:
+            - img [ref=e43]
+            - generic [ref=e46]:
+              - paragraph [ref=e47]: Email
+              - paragraph [ref=e48]: redactie@digitaltrendz.ro
+              - paragraph [ref=e49]: parteneriate@digitaltrendz.ro
+          - generic [ref=e51]:
+            - img [ref=e53]
+            - generic [ref=e56]:
+              - paragraph [ref=e57]: Timp de răspuns
+              - paragraph [ref=e58]: De obicei răspundem în 24-48 de ore lucrătoare.
+          - generic [ref=e60]:
+            - img [ref=e62]
+            - generic [ref=e65]:
+              - paragraph [ref=e66]: Locație
+              - paragraph [ref=e67]: București, România
+              - paragraph [ref=e68]: Echipă remote, disponibil online
+          - generic [ref=e69]:
+            - paragraph [ref=e70]: Propune un articol
+            - paragraph [ref=e71]: Ești expert în domeniu și vrei să contribui? Selectează subiectul "Colaborare editorială" și descrie-ne propunerea ta de articol.
+        - generic [ref=e73]:
+          - generic [ref=e74]:
+            - generic [ref=e75]:
+              - generic [ref=e76]: Numele tău *
+              - textbox "Ion Popescu" [ref=e77]
+            - generic [ref=e78]:
+              - generic [ref=e79]: Email *
+              - textbox "ion@exemplu.ro" [ref=e80]
+          - generic [ref=e81]:
+            - generic [ref=e82]: Subiect *
+            - combobox [ref=e83]:
+              - option "Selectează un subiect" [selected]
+              - option "Întrebare generală"
+              - option "Colaborare editorială"
+              - option "Publicitate & parteneriate"
+              - option "Raportare eroare"
+              - option "Altele"
+          - generic [ref=e84]:
+            - generic [ref=e85]: Mesaj *
+            - textbox "Scrie mesajul tău aici..." [ref=e86]
+          - button "Trimite mesajul" [ref=e87]:
+            - img
+            - text: Trimite mesajul
+  - contentinfo [ref=e88]:
+    - generic [ref=e90]:
+      - generic [ref=e91]:
+        - link "DigitalTrendz" [ref=e92] [cursor=pointer]:
+          - /url: /
+          - img [ref=e94]
+          - generic [ref=e96]: DigitalTrendz
+        - paragraph [ref=e97]: Sursa ta de inspirație pentru tot ce e nou în tehnologie, marketing și inovație digitală.
+      - generic [ref=e98]:
+        - heading "Navigare" [level=4] [ref=e99]
+        - list [ref=e100]:
+          - listitem [ref=e101]:
+            - link "Acasă" [ref=e102] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e103]:
+            - link "Articole" [ref=e104] [cursor=pointer]:
+              - /url: /articole
+          - listitem [ref=e105]:
+            - link "Categorii" [ref=e106] [cursor=pointer]:
+              - /url: /categorii
+          - listitem [ref=e107]:
+            - link "Resurse" [ref=e108] [cursor=pointer]:
+              - /url: /resurse
+          - listitem [ref=e109]:
+            - link "Despre" [ref=e110] [cursor=pointer]:
+              - /url: /despre
+          - listitem [ref=e111]:
+            - link "Contact" [ref=e112] [cursor=pointer]:
+              - /url: /contact
+      - generic [ref=e113]:
+        - heading "Categorii" [level=4] [ref=e114]
+        - list [ref=e115]:
+          - listitem [ref=e116]:
+            - link "AI & Tehnologie" [ref=e117] [cursor=pointer]:
+              - /url: /categorii/ai-tehnologie
+          - listitem [ref=e118]:
+            - link "Marketing Digital" [ref=e119] [cursor=pointer]:
+              - /url: /categorii/marketing-digital
+          - listitem [ref=e120]:
+            - link "Social Media" [ref=e121] [cursor=pointer]:
+              - /url: /categorii/social-media
+          - listitem [ref=e122]:
+            - link "E-commerce" [ref=e123] [cursor=pointer]:
+              - /url: /categorii/e-commerce
+          - listitem [ref=e124]:
+            - link "Dezvoltare Personală" [ref=e125] [cursor=pointer]:
+              - /url: /categorii/dezvoltare-personala
+      - generic [ref=e126]:
+        - heading "Resurse" [level=4] [ref=e127]
+        - list [ref=e128]:
+          - listitem [ref=e129]:
+            - link "Ghiduri" [ref=e130] [cursor=pointer]:
+              - /url: /resurse/ghiduri
+          - listitem [ref=e131]:
+            - link "Studii de caz" [ref=e132] [cursor=pointer]:
+              - /url: /resurse/studii-de-caz
+          - listitem [ref=e133]:
+            - link "Tools & Softwares" [ref=e134] [cursor=pointer]:
+              - /url: /resurse/tools
+          - listitem [ref=e135]:
+            - link "Evenimente" [ref=e136] [cursor=pointer]:
+              - /url: /resurse/evenimente
+          - listitem [ref=e137]:
+            - link "Cărți recomandate" [ref=e138] [cursor=pointer]:
+              - /url: /resurse/carti
+      - generic [ref=e139]:
+        - heading "Urmărește-ne" [level=4] [ref=e140]
+        - generic [ref=e141]:
+          - link [ref=e142] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e143]
+          - link [ref=e145] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e146]
+          - link [ref=e148] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e149]
+          - link [ref=e151] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e152]
+    - generic [ref=e155]:
+      - paragraph [ref=e156]: © 2024 DigitalTrendz. Toate drepturile rezervate.
+      - generic [ref=e157]:
+        - link "Politica de confidențialitate" [ref=e158] [cursor=pointer]:
+          - /url: /politica-confidentialitate
+        - link "Termeni și condiții" [ref=e159] [cursor=pointer]:
+          - /url: /termeni
+  - button "Open Next.js Dev Tools" [ref=e165] [cursor=pointer]:
+    - img [ref=e166]

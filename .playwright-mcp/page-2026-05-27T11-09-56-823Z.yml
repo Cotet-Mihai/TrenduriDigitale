@@ -1,0 +1,305 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - link "TrenduriDigitale" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "TrenduriDigitale" [ref=e7]
+      - navigation [ref=e8]:
+        - link "Acasă" [ref=e9] [cursor=pointer]:
+          - /url: /
+        - button "Articole" [ref=e11]:
+          - text: Articole
+          - img [ref=e12]
+        - button "Categorii" [ref=e15]:
+          - text: Categorii
+          - img [ref=e16]
+        - button "Resurse" [ref=e19]:
+          - text: Resurse
+          - img [ref=e20]
+        - link "Despre" [ref=e22] [cursor=pointer]:
+          - /url: /despre
+        - link "Contact" [ref=e23] [cursor=pointer]:
+          - /url: /contact
+      - generic [ref=e24]:
+        - button [ref=e25]:
+          - img [ref=e26]
+        - button "✉ Abonează-te" [ref=e29]:
+          - generic [ref=e30]: ✉
+          - text: Abonează-te
+  - main [ref=e31]:
+    - generic [ref=e33]:
+      - generic [ref=e34]:
+        - text: Trending acum
+        - 'heading "Inteligența Artificială în 2024: Inovații care schimbă regulile jocului" [level=1] [ref=e35]'
+        - paragraph [ref=e36]: Descoperă cum AI-ul transformă industrii, optimizează procese și creează noi oportunități de business.
+        - generic [ref=e37]:
+          - link "Citește articolul" [ref=e38] [cursor=pointer]:
+            - /url: /blog/inteligenta-artificiala-2024
+            - text: Citește articolul
+            - img
+          - button "Vezi video" [ref=e39]:
+            - img [ref=e41]
+            - text: Vezi video
+      - generic [ref=e43]:
+        - 'img "Inteligența Artificială în 2024: Inovații care schimbă regulile jocului" [ref=e44]'
+        - generic [ref=e45]: AI & Tehnologie
+    - generic [ref=e46]:
+      - generic [ref=e47]:
+        - heading "Articole recomandate" [level=2] [ref=e48]
+        - link "Vezi toate articolele" [ref=e49] [cursor=pointer]:
+          - /url: /articole
+          - text: Vezi toate articolele
+          - img [ref=e50]
+      - generic [ref=e52]:
+        - 'link "Marketingul în era digitală: Strategii care chiar funcționează Marketing Digital Marketingul în era digitală: Strategii care chiar funcționează De la conținut relevant la campanii personalizate, vezi ce funcționează în 2024. AP Andrei Popescu · 12 Mai 2024 · 6 min read" [ref=e53] [cursor=pointer]':
+          - /url: /blog/marketingul-in-era-digitala
+          - generic [ref=e54]:
+            - generic [ref=e55]:
+              - 'img "Marketingul în era digitală: Strategii care chiar funcționează" [ref=e56]'
+              - generic [ref=e57]: Marketing Digital
+            - generic [ref=e58]:
+              - 'heading "Marketingul în era digitală: Strategii care chiar funcționează" [level=3] [ref=e59]'
+              - paragraph [ref=e60]: De la conținut relevant la campanii personalizate, vezi ce funcționează în 2024.
+              - generic [ref=e61]:
+                - generic [ref=e63]: AP
+                - generic [ref=e64]: Andrei Popescu
+                - generic [ref=e65]: ·
+                - generic [ref=e66]: 12 Mai 2024
+                - generic [ref=e67]: ·
+                - generic [ref=e68]: 6 min read
+        - link "Gadgeturi smart care îți fac viața mai simplă în 2024 Tehnologie Gadgeturi smart care îți fac viața mai simplă în 2024 Dispozitive inovatoare care combină tehnologia cu funcționalitatea de zi cu zi. IM Ioana Marinescu · 9 Mai 2024 · 5 min read" [ref=e69] [cursor=pointer]:
+          - /url: /blog/gadgeturi-smart-2024
+          - generic [ref=e70]:
+            - generic [ref=e71]:
+              - img "Gadgeturi smart care îți fac viața mai simplă în 2024" [ref=e72]
+              - generic [ref=e73]: Tehnologie
+            - generic [ref=e74]:
+              - heading "Gadgeturi smart care îți fac viața mai simplă în 2024" [level=3] [ref=e75]
+              - paragraph [ref=e76]: Dispozitive inovatoare care combină tehnologia cu funcționalitatea de zi cu zi.
+              - generic [ref=e77]:
+                - generic [ref=e79]: IM
+                - generic [ref=e80]: Ioana Marinescu
+                - generic [ref=e81]: ·
+                - generic [ref=e82]: 9 Mai 2024
+                - generic [ref=e83]: ·
+                - generic [ref=e84]: 5 min read
+        - link "Cum să crești organic pe Instagram în 2024 Social Media Cum să crești organic pe Instagram în 2024 Strategii testate pentru a construi o comunitate reală și implicată. MD Mihai Dumitru · 7 Mai 2024 · 7 min read" [ref=e85] [cursor=pointer]:
+          - /url: /blog/crestere-organica-instagram
+          - generic [ref=e86]:
+            - generic [ref=e87]:
+              - img "Cum să crești organic pe Instagram în 2024" [ref=e88]
+              - generic [ref=e89]: Social Media
+            - generic [ref=e90]:
+              - heading "Cum să crești organic pe Instagram în 2024" [level=3] [ref=e91]
+              - paragraph [ref=e92]: Strategii testate pentru a construi o comunitate reală și implicată.
+              - generic [ref=e93]:
+                - generic [ref=e95]: MD
+                - generic [ref=e96]: Mihai Dumitru
+                - generic [ref=e97]: ·
+                - generic [ref=e98]: 7 Mai 2024
+                - generic [ref=e99]: ·
+                - generic [ref=e100]: 7 min read
+    - generic [ref=e102]:
+      - generic [ref=e103]:
+        - heading "Categorii populare" [level=2] [ref=e104]
+        - list [ref=e105]:
+          - listitem [ref=e106]:
+            - link "AI & Tehnologie 24 articole" [ref=e107] [cursor=pointer]:
+              - /url: /categorii/ai-tehnologie
+              - img [ref=e109]
+              - generic [ref=e112]:
+                - paragraph [ref=e113]: AI & Tehnologie
+                - paragraph [ref=e114]: 24 articole
+              - img [ref=e115]
+          - listitem [ref=e117]:
+            - link "Marketing Digital 18 articole" [ref=e118] [cursor=pointer]:
+              - /url: /categorii/marketing-digital
+              - img [ref=e120]
+              - generic [ref=e123]:
+                - paragraph [ref=e124]: Marketing Digital
+                - paragraph [ref=e125]: 18 articole
+              - img [ref=e126]
+          - listitem [ref=e128]:
+            - link "Social Media 15 articole" [ref=e129] [cursor=pointer]:
+              - /url: /categorii/social-media
+              - img [ref=e131]
+              - generic [ref=e137]:
+                - paragraph [ref=e138]: Social Media
+                - paragraph [ref=e139]: 15 articole
+              - img [ref=e140]
+          - listitem [ref=e142]:
+            - link "E-commerce 12 articole" [ref=e143] [cursor=pointer]:
+              - /url: /categorii/e-commerce
+              - img [ref=e145]
+              - generic [ref=e149]:
+                - paragraph [ref=e150]: E-commerce
+                - paragraph [ref=e151]: 12 articole
+              - img [ref=e152]
+          - listitem [ref=e154]:
+            - link "Dezvoltare Personală 10 articole" [ref=e155] [cursor=pointer]:
+              - /url: /categorii/dezvoltare-personala
+              - img [ref=e157]
+              - generic [ref=e160]:
+                - paragraph [ref=e161]: Dezvoltare Personală
+                - paragraph [ref=e162]: 10 articole
+              - img [ref=e163]
+          - listitem [ref=e165]:
+            - link "Business 9 articole" [ref=e166] [cursor=pointer]:
+              - /url: /categorii/business
+              - generic [ref=e168]:
+                - paragraph [ref=e169]: Business
+                - paragraph [ref=e170]: 9 articole
+              - img [ref=e171]
+          - listitem [ref=e173]:
+            - link "Tehnologie 14 articole" [ref=e174] [cursor=pointer]:
+              - /url: /categorii/tehnologie
+              - generic [ref=e176]:
+                - paragraph [ref=e177]: Tehnologie
+                - paragraph [ref=e178]: 14 articole
+              - img [ref=e179]
+        - link "Vezi toate categoriile" [ref=e182] [cursor=pointer]:
+          - /url: /categorii
+          - text: Vezi toate categoriile
+          - img [ref=e183]
+      - generic [ref=e185]:
+        - heading "Ultimele articole" [level=2] [ref=e186]
+        - generic [ref=e187]:
+          - 'link "Business Automatizarea proceselor: Cheia eficienței în afaceri Află cum automatizarea poate reduce costurile și crește productivitatea. AI Alexandra Ivanov · 6 Mai 2024 · 6 min read Automatizarea proceselor: Cheia eficienței în afaceri" [ref=e188] [cursor=pointer]':
+            - /url: /blog/automatizarea-proceselor-afaceri
+            - generic [ref=e189]:
+              - generic [ref=e190]: Business
+              - 'heading "Automatizarea proceselor: Cheia eficienței în afaceri" [level=3] [ref=e191]'
+              - paragraph [ref=e192]: Află cum automatizarea poate reduce costurile și crește productivitatea.
+              - generic [ref=e193]:
+                - generic [ref=e195]: AI
+                - generic [ref=e196]: Alexandra Ivanov
+                - generic [ref=e197]: ·
+                - generic [ref=e198]: 6 Mai 2024
+                - generic [ref=e199]: ·
+                - generic [ref=e200]: 6 min read
+            - 'img "Automatizarea proceselor: Cheia eficienței în afaceri" [ref=e202]'
+          - 'link "Tehnologie Realitatea augmentată: De la entertainment la educație Exemple practice de utilizare a AR în diverse domenii și beneficii reale. VN Vlad Negrescu · 5 Mai 2024 · 5 min read Realitatea augmentată: De la entertainment la educație" [ref=e203] [cursor=pointer]':
+            - /url: /blog/realitatea-augmentata-educatie
+            - generic [ref=e204]:
+              - generic [ref=e205]: Tehnologie
+              - 'heading "Realitatea augmentată: De la entertainment la educație" [level=3] [ref=e206]'
+              - paragraph [ref=e207]: Exemple practice de utilizare a AR în diverse domenii și beneficii reale.
+              - generic [ref=e208]:
+                - generic [ref=e210]: VN
+                - generic [ref=e211]: Vlad Negrescu
+                - generic [ref=e212]: ·
+                - generic [ref=e213]: 5 Mai 2024
+                - generic [ref=e214]: ·
+                - generic [ref=e215]: 5 min read
+            - 'img "Realitatea augmentată: De la entertainment la educație" [ref=e217]'
+          - 'link "Marketing Digital SEO în 2024: Ce s-a schimbat și cum te adaptezi Tendințele SEO care contează și pașii pe care trebuie să îi urmezi. RE Raluca Enache · 4 Mai 2024 · 8 min read SEO în 2024: Ce s-a schimbat și cum te adaptezi" [ref=e218] [cursor=pointer]':
+            - /url: /blog/seo-2024-schimbari
+            - generic [ref=e219]:
+              - generic [ref=e220]: Marketing Digital
+              - 'heading "SEO în 2024: Ce s-a schimbat și cum te adaptezi" [level=3] [ref=e221]'
+              - paragraph [ref=e222]: Tendințele SEO care contează și pașii pe care trebuie să îi urmezi.
+              - generic [ref=e223]:
+                - generic [ref=e225]: RE
+                - generic [ref=e226]: Raluca Enache
+                - generic [ref=e227]: ·
+                - generic [ref=e228]: 4 Mai 2024
+                - generic [ref=e229]: ·
+                - generic [ref=e230]: 8 min read
+            - 'img "SEO în 2024: Ce s-a schimbat și cum te adaptezi" [ref=e232]'
+    - generic [ref=e236]:
+      - generic [ref=e237]:
+        - img [ref=e239]
+        - generic [ref=e242]:
+          - heading "Rămâi la curent cu trendurile digitale" [level=3] [ref=e243]
+          - paragraph [ref=e244]: Abonează-te la newsletter și primește cele mai noi articole și resurse direct în inboxul tău.
+      - generic [ref=e246]:
+        - textbox "Emailul tău" [ref=e247]
+        - button "Abonează-te" [ref=e248]
+  - contentinfo [ref=e249]:
+    - generic [ref=e251]:
+      - generic [ref=e252]:
+        - link "TrenduriDigitale" [ref=e253] [cursor=pointer]:
+          - /url: /
+          - img "TrenduriDigitale" [ref=e254]
+        - paragraph [ref=e255]: Sursa ta de inspirație pentru tot ce e nou în tehnologie, marketing și inovație digitală.
+      - generic [ref=e256]:
+        - heading "Navigare" [level=4] [ref=e257]
+        - list [ref=e258]:
+          - listitem [ref=e259]:
+            - link "Acasă" [ref=e260] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e261]:
+            - link "Articole" [ref=e262] [cursor=pointer]:
+              - /url: /articole
+          - listitem [ref=e263]:
+            - link "Categorii" [ref=e264] [cursor=pointer]:
+              - /url: /categorii
+          - listitem [ref=e265]:
+            - link "Resurse" [ref=e266] [cursor=pointer]:
+              - /url: /resurse
+          - listitem [ref=e267]:
+            - link "Despre" [ref=e268] [cursor=pointer]:
+              - /url: /despre
+          - listitem [ref=e269]:
+            - link "Contact" [ref=e270] [cursor=pointer]:
+              - /url: /contact
+      - generic [ref=e271]:
+        - heading "Categorii" [level=4] [ref=e272]
+        - list [ref=e273]:
+          - listitem [ref=e274]:
+            - link "AI & Tehnologie" [ref=e275] [cursor=pointer]:
+              - /url: /categorii/ai-tehnologie
+          - listitem [ref=e276]:
+            - link "Marketing Digital" [ref=e277] [cursor=pointer]:
+              - /url: /categorii/marketing-digital
+          - listitem [ref=e278]:
+            - link "Social Media" [ref=e279] [cursor=pointer]:
+              - /url: /categorii/social-media
+          - listitem [ref=e280]:
+            - link "E-commerce" [ref=e281] [cursor=pointer]:
+              - /url: /categorii/e-commerce
+          - listitem [ref=e282]:
+            - link "Dezvoltare Personală" [ref=e283] [cursor=pointer]:
+              - /url: /categorii/dezvoltare-personala
+      - generic [ref=e284]:
+        - heading "Resurse" [level=4] [ref=e285]
+        - list [ref=e286]:
+          - listitem [ref=e287]:
+            - link "Ghiduri" [ref=e288] [cursor=pointer]:
+              - /url: /resurse/ghiduri
+          - listitem [ref=e289]:
+            - link "Studii de caz" [ref=e290] [cursor=pointer]:
+              - /url: /resurse/studii-de-caz
+          - listitem [ref=e291]:
+            - link "Tools & Softwares" [ref=e292] [cursor=pointer]:
+              - /url: /resurse/tools
+          - listitem [ref=e293]:
+            - link "Evenimente" [ref=e294] [cursor=pointer]:
+              - /url: /resurse/evenimente
+          - listitem [ref=e295]:
+            - link "Cărți recomandate" [ref=e296] [cursor=pointer]:
+              - /url: /resurse/carti
+      - generic [ref=e297]:
+        - heading "Urmărește-ne" [level=4] [ref=e298]
+        - generic [ref=e299]:
+          - link [ref=e300] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e301]
+          - link [ref=e303] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e304]
+          - link [ref=e306] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e307]
+          - link [ref=e309] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e310]
+    - generic [ref=e313]:
+      - paragraph [ref=e314]: © 2024 DigitalTrendz. Toate drepturile rezervate.
+      - generic [ref=e315]:
+        - link "Politica de confidențialitate" [ref=e316] [cursor=pointer]:
+          - /url: /politica-confidentialitate
+        - link "Termeni și condiții" [ref=e317] [cursor=pointer]:
+          - /url: /termeni
+  - button "Open Next.js Dev Tools" [ref=e323] [cursor=pointer]:
+    - img [ref=e324]

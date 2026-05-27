@@ -1,0 +1,380 @@
+[     114ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[     335ms] [LOG] [Fast Refresh] done in 327ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[     422ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[     444ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[     603ms] [WARNING] Image with src "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&h=500&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[    1054ms] [WARNING] Image with src "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[    1055ms] [WARNING] Image with src "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[    1056ms] [WARNING] Image with src "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[    1058ms] [WARNING] Image with src "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[    1060ms] [WARNING] Image with src "https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[    1063ms] [WARNING] Image with src "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  620489ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  620554ms] [LOG] [Fast Refresh] done in 154ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  620675ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  620908ms] [LOG] [Fast Refresh] done in 339ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  621104ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  621299ms] [LOG] [Fast Refresh] done in 301ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  638011ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  638038ms] [LOG] [Fast Refresh] done in 109ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  644455ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  644554ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  644563ms] [LOG] [Fast Refresh] done in 203ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  644678ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  644912ms] [LOG] [Fast Refresh] done in 348ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  645027ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  645327ms] [LOG] [Fast Refresh] done in 406ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  645897ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  645963ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  646277ms] [WARNING] Image with src "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&h=500&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  646277ms] [WARNING] Image with src "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  646277ms] [WARNING] Image with src "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  646279ms] [WARNING] Image with src "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  646295ms] [WARNING] Image with src "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  646297ms] [WARNING] Image with src "https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  646297ms] [WARNING] Image with src "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  649987ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  650138ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  650180ms] [LOG] [Fast Refresh] done in 353ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  650368ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  650518ms] [LOG] [Fast Refresh] done in 265ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  650635ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  650856ms] [LOG] [Fast Refresh] done in 326ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  651121ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  651158ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  651412ms] [WARNING] Image with src "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&h=500&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  651412ms] [WARNING] Image with src "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  651413ms] [WARNING] Image with src "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  651413ms] [WARNING] Image with src "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  651413ms] [WARNING] Image with src "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  651413ms] [WARNING] Image with src "https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  651417ms] [WARNING] Image with src "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  655067ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  655290ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  655295ms] [LOG] [Fast Refresh] done in 310ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  655410ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  655677ms] [LOG] [Fast Refresh] done in 380ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  655802ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  656093ms] [LOG] [Fast Refresh] done in 392ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  656363ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  656400ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  656591ms] [WARNING] Image with src "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&h=500&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  656592ms] [WARNING] Image with src "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  656592ms] [WARNING] Image with src "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  656592ms] [WARNING] Image with src "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  656592ms] [WARNING] Image with src "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  656593ms] [WARNING] Image with src "https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  656596ms] [WARNING] Image with src "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  670580ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  670748ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  670795ms] [LOG] [Fast Refresh] done in 322ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  670905ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  671081ms] [LOG] [Fast Refresh] done in 284ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  671208ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  671525ms] [LOG] [Fast Refresh] done in 432ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  671954ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  671979ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  672237ms] [WARNING] Image with src "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&h=500&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  672237ms] [WARNING] Image with src "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  672237ms] [WARNING] Image with src "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  672238ms] [WARNING] Image with src "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  672238ms] [WARNING] Image with src "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  672238ms] [WARNING] Image with src "https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  672238ms] [WARNING] Image with src "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  684468ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  684614ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  684618ms] [LOG] [Fast Refresh] done in 284ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  684728ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  684946ms] [LOG] [Fast Refresh] done in 327ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  685062ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  685378ms] [LOG] [Fast Refresh] done in 422ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  685895ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  685938ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  686102ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  686107ms] [LOG] [Fast Refresh] done in 125ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  686263ms] [WARNING] Image with src "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&h=500&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  686263ms] [WARNING] Image with src "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  686263ms] [WARNING] Image with src "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  686264ms] [WARNING] Image with src "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  686264ms] [WARNING] Image with src "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  686264ms] [WARNING] Image with src "https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  686267ms] [WARNING] Image with src "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  707117ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  707257ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  707266ms] [LOG] [Fast Refresh] done in 249ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  707377ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  707601ms] [LOG] [Fast Refresh] done in 330ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  707722ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  708117ms] [LOG] [Fast Refresh] done in 502ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  708645ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  708678ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  708975ms] [WARNING] Image with src "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&h=500&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  708975ms] [WARNING] Image with src "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  708976ms] [WARNING] Image with src "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  708976ms] [WARNING] Image with src "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  708976ms] [WARNING] Image with src "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  708977ms] [WARNING] Image with src "https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  708982ms] [WARNING] Image with src "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  733099ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  733217ms] [LOG] [Fast Refresh] done in 172ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  733220ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  733280ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  733285ms] [LOG] [Fast Refresh] done in 62ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  733393ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  733612ms] [LOG] [Fast Refresh] done in 326ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  733743ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  734061ms] [LOG] [Fast Refresh] done in 434ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  734639ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  734665ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  734907ms] [WARNING] Image with src "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&h=500&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  734908ms] [WARNING] Image with src "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  734908ms] [WARNING] Image with src "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  734908ms] [WARNING] Image with src "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  734908ms] [WARNING] Image with src "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  734908ms] [WARNING] Image with src "https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  734911ms] [WARNING] Image with src "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  756331ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  756490ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  756528ms] [LOG] [Fast Refresh] done in 273ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  756648ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  756846ms] [LOG] [Fast Refresh] done in 313ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  756958ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  757095ms] [LOG] [Fast Refresh] done in 248ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  757612ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  757714ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  757923ms] [WARNING] Image with src "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&h=500&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  757923ms] [WARNING] Image with src "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  757923ms] [WARNING] Image with src "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  757923ms] [WARNING] Image with src "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  757923ms] [WARNING] Image with src "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  757925ms] [WARNING] Image with src "https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  757932ms] [WARNING] Image with src "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  779979ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  780340ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  780345ms] [LOG] [Fast Refresh] done in 470ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  780460ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  780581ms] [LOG] [Fast Refresh] done in 235ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  780791ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  781051ms] [LOG] [Fast Refresh] done in 369ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  781166ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  781540ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  781590ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  781753ms] [WARNING] Image with src "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&h=500&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  781754ms] [WARNING] Image with src "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  781754ms] [WARNING] Image with src "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  781754ms] [WARNING] Image with src "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  781754ms] [WARNING] Image with src "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  781754ms] [WARNING] Image with src "https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  781762ms] [WARNING] Image with src "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  808627ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  808777ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  808780ms] [LOG] [Fast Refresh] done in 281ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  808883ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  809098ms] [LOG] [Fast Refresh] done in 317ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  809209ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  809991ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  810014ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  810229ms] [WARNING] Image with src "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&h=500&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  810229ms] [WARNING] Image with src "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  810229ms] [WARNING] Image with src "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  810229ms] [WARNING] Image with src "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  810229ms] [WARNING] Image with src "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  810230ms] [WARNING] Image with src "https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  810234ms] [WARNING] Image with src "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  839581ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  839661ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  839774ms] [LOG] [Fast Refresh] done in 326ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  839876ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  839991ms] [LOG] [Fast Refresh] done in 218ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  840112ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  840386ms] [LOG] [Fast Refresh] done in 380ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  840940ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  840963ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  841216ms] [WARNING] Image with src "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&h=500&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  841217ms] [WARNING] Image with src "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  841217ms] [WARNING] Image with src "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  841217ms] [WARNING] Image with src "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  841218ms] [WARNING] Image with src "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  841221ms] [WARNING] Image with src "https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  841222ms] [WARNING] Image with src "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  877383ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  877788ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  877797ms] [LOG] [Fast Refresh] done in 455ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  878159ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  878490ms] [LOG] [Fast Refresh] done in 438ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  879009ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  879050ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  879321ms] [WARNING] Image with src "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&h=500&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  879322ms] [WARNING] Image with src "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  879322ms] [WARNING] Image with src "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  879323ms] [WARNING] Image with src "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  879323ms] [WARNING] Image with src "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  879323ms] [WARNING] Image with src "https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  879323ms] [WARNING] Image with src "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  905428ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  905587ms] [LOG] [Fast Refresh] done in 268ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  905589ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  905618ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  905620ms] [LOG] [Fast Refresh] done in 31ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  905722ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  905924ms] [LOG] [Fast Refresh] done in 302ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  906052ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  906338ms] [LOG] [Fast Refresh] done in 397ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  906771ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  906823ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  907115ms] [WARNING] Image with src "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&h=500&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  907116ms] [WARNING] Image with src "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  907116ms] [WARNING] Image with src "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  907116ms] [WARNING] Image with src "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  907116ms] [WARNING] Image with src "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  907118ms] [WARNING] Image with src "https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  907122ms] [WARNING] Image with src "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  923998ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  924077ms] [LOG] [Fast Refresh] done in 175ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  924089ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  924491ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  924497ms] [LOG] [Fast Refresh] done in 411ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  924861ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  925029ms] [LOG] [Fast Refresh] done in 276ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  925150ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  925269ms] [LOG] [Fast Refresh] done in 240ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  925632ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  925662ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  925935ms] [WARNING] Image with src "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&h=500&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  925935ms] [WARNING] Image with src "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  925936ms] [WARNING] Image with src "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  925937ms] [WARNING] Image with src "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  925937ms] [WARNING] Image with src "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  925937ms] [WARNING] Image with src "https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  925938ms] [WARNING] Image with src "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  941504ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  941583ms] [LOG] [Fast Refresh] done in 176ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  941627ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  941788ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  941794ms] [LOG] [Fast Refresh] done in 202ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  942020ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  942150ms] [LOG] [Fast Refresh] done in 238ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  942277ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  942613ms] [LOG] [Fast Refresh] done in 450ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  943265ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  943297ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  943556ms] [WARNING] Image with src "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&h=500&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  943556ms] [WARNING] Image with src "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  943557ms] [WARNING] Image with src "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  943560ms] [WARNING] Image with src "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  943561ms] [WARNING] Image with src "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  943561ms] [WARNING] Image with src "https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  943562ms] [WARNING] Image with src "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&h=400&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  949433ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  950789ms] [LOG] [Fast Refresh] done in 1467ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  950898ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  951014ms] [LOG] [Fast Refresh] done in 224ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  951135ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  951228ms] [LOG] [Fast Refresh] done in 205ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  951693ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
+[  951730ms] [LOG] [Fast Refresh] done in 142ms @ http://localhost:3000/_next/static/chunks/07vw_next_dist_13_qw0k._.js:2477
