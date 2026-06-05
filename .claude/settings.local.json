@@ -14,7 +14,10 @@
       "Bash(node -e ' *)",
       "Bash(python3 -c \"from PIL import Image; print\\('pillow ok'\\)\")",
       "Bash(python -c \"from PIL import Image; print\\('pillow ok'\\)\")",
-      "Bash(python *)"
+      "Bash(python *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)"
     ]
   }
 }
