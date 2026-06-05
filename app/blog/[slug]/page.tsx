@@ -7,6 +7,8 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import ArticleCard from "@/components/article-card";
 import NewsletterSection from "@/components/newsletter-section";
 import { getAllPostSlugs, getPostBySlug, getRelatedPosts } from "@/lib/queries";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -35,10 +37,6 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   const displayRelated = await getRelatedPosts(slug, post.categorySlug);
 
-  const contentParagraphs = post.content
-    .trim()
-    .split("\n\n")
-    .filter(Boolean);
 
   return (
     <main className="flex-1">
@@ -119,58 +117,40 @@ export default async function BlogPostPage({ params }: PageProps) {
 
         {/* Article content */}
         <div className="prose prose-neutral max-w-none">
-          {contentParagraphs.map((paragraph, i) => {
-            const trimmed = paragraph.trim();
-
-            if (trimmed.startsWith("## ")) {
-              return (
-                <h2 key={i} className="font-heading text-2xl mt-10 mb-4">
-                  {trimmed.replace("## ", "")}
-                </h2>
-              );
-            }
-
-            if (trimmed.startsWith("### ")) {
-              return (
-                <h3 key={i} className="font-heading text-xl mt-6 mb-3">
-                  {trimmed.replace("### ", "")}
-                </h3>
-              );
-            }
-
-            if (trimmed.startsWith("- ") || trimmed.includes("\n- ")) {
-              const items = trimmed.split("\n").filter((l) => l.startsWith("- "));
-              return (
-                <ul key={i} className="list-disc list-inside space-y-1.5 my-4 text-muted-foreground">
-                  {items.map((item, j) => (
-                    <li key={j} className="text-base leading-relaxed">
-                      {item.replace(/^- \*\*(.+?)\*\*/, (_, bold) => bold)}
-                      {item.replace(/^- \*\*[^*]+\*\* – /, "").replace(/^- /, "")}
-                    </li>
-                  ))}
-                </ul>
-              );
-            }
-
-            if (/^\d+\./.test(trimmed)) {
-              const items = trimmed.split("\n").filter((l) => /^\d+\./.test(l));
-              return (
-                <ol key={i} className="list-decimal list-inside space-y-1.5 my-4 text-muted-foreground">
-                  {items.map((item, j) => (
-                    <li key={j} className="text-base leading-relaxed">
-                      {item.replace(/^\d+\. /, "")}
-                    </li>
-                  ))}
-                </ol>
-              );
-            }
-
-            return (
-              <p key={i} className="text-base leading-relaxed text-foreground/80 my-4">
-                {trimmed}
-              </p>
-            );
-          })}
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            components={{
+              h2: ({ children }) => (
+                <h2 className="font-heading text-2xl mt-10 mb-4">{children}</h2>
+              ),
+              h3: ({ children }) => (
+                <h3 className="font-heading text-xl mt-6 mb-3">{children}</h3>
+              ),
+              p: ({ children }) => (
+                <p className="text-base leading-relaxed text-foreground/80 my-4">{children}</p>
+              ),
+              ul: ({ children }) => (
+                <ul className="list-disc list-inside space-y-1.5 my-4 text-muted-foreground">{children}</ul>
+              ),
+              ol: ({ children }) => (
+                <ol className="list-decimal list-inside space-y-1.5 my-4 text-muted-foreground">{children}</ol>
+              ),
+              li: ({ children }) => (
+                <li className="text-base leading-relaxed">{children}</li>
+              ),
+              strong: ({ children }) => (
+                <strong className="font-semibold text-foreground">{children}</strong>
+              ),
+              em: ({ children }) => (
+                <em className="italic">{children}</em>
+              ),
+              a: ({ href, children }) => (
+                <a href={href} className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">{children}</a>
+              ),
+            }}
+          >
+            {post.content}
+          </ReactMarkdown>
         </div>
 
         {/* Tags */}
