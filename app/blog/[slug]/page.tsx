@@ -33,6 +33,14 @@ function extractHeadings(content: string): { id: string; text: string }[] {
     });
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function getNodeText(node: any): string {
+  if (!node) return "";
+  if (node.type === "text") return node.value ?? "";
+  if (Array.isArray(node.children)) return node.children.map(getNodeText).join("");
+  return "";
+}
+
 export async function generateStaticParams() {
   const slugs = await getAllPostSlugs();
   return slugs.map((s) => ({ slug: s.slug }));
@@ -168,9 +176,8 @@ export default async function BlogPostPage({ params }: PageProps) {
               <ReactMarkdown
                 remarkPlugins={[remarkGfm]}
                 components={{
-                  h2: ({ children }) => {
-                    const text = [children].flat().join("");
-                    const id = slugify(text);
+                  h2: ({ node, children }) => {
+                    const id = slugify(getNodeText(node));
                     return (
                       <h2
                         id={id}
