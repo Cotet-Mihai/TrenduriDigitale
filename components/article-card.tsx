@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import type { BlogPost } from "@/lib/data";
+import type { BlogPost } from "@/lib/types";
 
 interface ArticleCardProps {
   post: BlogPost;

@@ -5,7 +5,7 @@ import { Search, SlidersHorizontal } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import ArticleCard from "@/components/article-card";
-import type { BlogPost, Category } from "@/lib/data";
+import type { BlogPost, Category } from "@/lib/types";
 
 interface ArticlesGridProps {
   posts: BlogPost[];
