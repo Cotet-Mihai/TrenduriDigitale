@@ -1,21 +1,27 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Play, Cpu, TrendingUp, Share2, ShoppingCart, User, ChevronRight } from "lucide-react";
+import { ArrowRight, Play, ChevronRight } from "lucide-react";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import ArticleCard from "@/components/article-card";
 import NewsletterSection from "@/components/newsletter-section";
-import { featuredPost, recommendedPosts, latestPosts, categories } from "@/lib/data";
+import { getFeaturedPost, getRecentPosts, getCategories } from "@/lib/queries";
+import { getCategoryIcon, categoryIconHoverMap } from "@/lib/category-icons";
 
-const categoryIcons: Record<string, React.ReactNode> = {
-  "cpu": <Cpu className="w-4 h-4" />,
-  "trending-up": <TrendingUp className="w-4 h-4" />,
-  "share-2": <Share2 className="w-4 h-4" />,
-  "shopping-cart": <ShoppingCart className="w-4 h-4" />,
-  "user": <User className="w-4 h-4" />,
-};
+export default async function HomePage() {
+  const [featured, recent, categories] = await Promise.all([
+    getFeaturedPost(),
+    getRecentPosts(7),
+    getCategories(),
+  ]);
 
-export default function HomePage() {
+  const displayFeatured = featured ?? recent[0];
+  const others = recent.filter((p) => p.id !== displayFeatured?.id);
+  const recommended = others.slice(0, 3);
+  const latest = others.slice(3, 6);
+
+  if (!displayFeatured) return null;
+
   return (
     <main className="flex-1">
       {/* Hero */}
@@ -27,14 +33,14 @@ export default function HomePage() {
               Trending acum
             </span>
             <h1 className="font-heading text-4xl lg:text-5xl leading-tight">
-              {featuredPost.title}
+              {displayFeatured.title}
             </h1>
             <p className="text-muted-foreground text-base leading-relaxed max-w-lg">
-              {featuredPost.excerpt}
+              {displayFeatured.excerpt}
             </p>
             <div className="flex items-center gap-5">
               <Link
-                href={`/blog/${featuredPost.slug}`}
+                href={`/blog/${displayFeatured.slug}`}
                 className={buttonVariants({ size: "lg" }) + " bg-foreground text-background hover:bg-foreground/90 gap-2 h-11 px-6 rounded-lg"}
               >
                 Citește articolul <ArrowRight className="w-4 h-4" />
@@ -51,15 +57,15 @@ export default function HomePage() {
           {/* Right – hero image */}
           <div className="relative rounded-2xl overflow-hidden aspect-[4/3] shadow-xl">
             <Image
-              src={featuredPost.image}
-              alt={featuredPost.title}
+              src={displayFeatured.image}
+              alt={displayFeatured.title}
               fill
               priority
               className="object-cover"
             />
             <div className="absolute top-4 right-4">
               <span className="bg-white/95 text-foreground text-[10px] font-bold uppercase tracking-wide px-3 py-1.5 rounded-full shadow-sm">
-                {featuredPost.category}
+                {displayFeatured.category}
               </span>
             </div>
           </div>
@@ -78,7 +84,7 @@ export default function HomePage() {
           </Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {recommendedPosts.map((post) => (
+          {recommended.map((post) => (
             <ArticleCard key={post.id} post={post} />
           ))}
         </div>
@@ -97,8 +103,8 @@ export default function HomePage() {
                     href={`/categorii/${cat.slug}`}
                     className="flex items-center gap-3 px-3 py-3 rounded-xl hover:bg-muted/60 transition-colors group"
                   >
-                    <div className="w-9 h-9 rounded-lg bg-muted flex items-center justify-center text-muted-foreground group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors shrink-0">
-                      {categoryIcons[cat.icon]}
+                    <div className="w-9 h-9 rounded-lg bg-muted flex items-center justify-center shrink-0 text-muted-foreground">
+                      {getCategoryIcon(cat.icon, `w-4 h-4 transition-[color,filter] duration-300 ease-out [filter:drop-shadow(0_0_0px_transparent)] ${categoryIconHoverMap[cat.icon] ?? ""} group-hover:[filter:drop-shadow(0_0_5px_currentColor)]`)}
                     </div>
                     <div className="flex-1 min-w-0">
                       <p className="text-sm font-semibold truncate">{cat.name}</p>
@@ -123,7 +129,7 @@ export default function HomePage() {
           <div className="lg:col-span-3">
             <h2 className="text-xl font-bold mb-5">Ultimele articole</h2>
             <div className="space-y-7">
-              {latestPosts.map((post) => (
+              {latest.map((post) => (
                 <Link key={post.id} href={`/blog/${post.slug}`} className="group flex gap-4 items-start">
                   <div className="flex-1 min-w-0">
                     <span className="text-[10px] font-bold uppercase tracking-widest text-blue-600 mb-1 block">
