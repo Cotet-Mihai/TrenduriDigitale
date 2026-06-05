@@ -1,12 +1,14 @@
 import ArticlesGrid from "@/components/articles-grid";
-import { blogPosts, categories } from "@/lib/data";
+import { getPosts, getCategories } from "@/lib/queries";
 
 export const metadata = {
   title: "Articole – DigitalTrendz",
   description: "Toate articolele despre tehnologie, marketing digital, social media și inovație.",
 };
 
-export default function ArticolePage() {
+export default async function ArticolePage() {
+  const [posts, categories] = await Promise.all([getPosts(), getCategories()]);
+
   return (
     <main className="flex-1">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -16,7 +18,7 @@ export default function ArticolePage() {
             Explorează întreaga colecție de articole despre lumea digitală.
           </p>
         </div>
-        <ArticlesGrid posts={blogPosts} categories={categories} />
+        <ArticlesGrid posts={posts} categories={categories} />
       </div>
     </main>
   );
