@@ -17,7 +17,34 @@
       "Bash(python *)",
       "Bash(git add *)",
       "Bash(git commit -m ' *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(git checkout *)",
+      "Bash(pnpm build *)",
+      "Bash(claude mcp *)",
+      "Bash(npx skills *)",
+      "mcp__supabase__get_publishable_keys",
+      "mcp__supabase__get_project_url",
+      "mcp__supabase__list_tables",
+      "Bash(pnpm add *)",
+      "Bash(npx tsc *)",
+      "Bash(git check-ignore *)",
+      "mcp__supabase__execute_sql",
+      "Bash(npx @supabase/supabase-js list-tables --verbose)",
+      "Bash(supabase --version)",
+      "Bash(cat)",
+      "Read(//tmp/**)",
+      "Bash(find C:\\\\\\\\Users\\\\\\\\mc_mi\\\\\\\\OneDrive\\\\\\\\Desktop\\\\\\\\TrenduriDigitale -name \"*supabase*\" -o -name \"*schema*\" -o -name \"*migration*\")",
+      "PowerShell($env:http_proxy; $env:https_proxy; echo \"Testing connectivity...\"; [System.Net.ServicePointManager]::SecurityProtocol | Out-String)",
+      "Bash(powershell *)",
+      "Bash(gh pr create --title 'feat: Supabase database setup — schema, RLS, seed data' --body ' *)",
+      "Bash(pnpm tsc *)",
+      "Bash(git commit *)",
+      "Bash(Select-String \"blog\")",
+      "Bash(git rm *)"
     ]
-  }
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "supabase"
+  ]
 }
