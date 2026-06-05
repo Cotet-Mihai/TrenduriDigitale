@@ -1,30 +1,17 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft, Cpu, TrendingUp, Share2, ShoppingCart, User, Briefcase, Monitor } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import ArticleCard from "@/components/article-card";
-import { categories, getCategoryBySlug, getPostsByCategory } from "@/lib/data";
+import { getCategoryBySlug, getPostsByCategory } from "@/lib/queries";
+import { getCategoryIcon } from "@/lib/category-icons";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
-const iconMap: Record<string, React.ReactNode> = {
-  cpu: <Cpu className="w-6 h-6" />,
-  "trending-up": <TrendingUp className="w-6 h-6" />,
-  "share-2": <Share2 className="w-6 h-6" />,
-  "shopping-cart": <ShoppingCart className="w-6 h-6" />,
-  user: <User className="w-6 h-6" />,
-  briefcase: <Briefcase className="w-6 h-6" />,
-  monitor: <Monitor className="w-6 h-6" />,
-};
-
-export async function generateStaticParams() {
-  return categories.map((cat) => ({ slug: cat.slug }));
-}
-
 export async function generateMetadata({ params }: PageProps) {
   const { slug } = await params;
-  const cat = getCategoryBySlug(slug);
+  const cat = await getCategoryBySlug(slug);
   if (!cat) return {};
   return {
     title: `${cat.name} – DigitalTrendz`,
@@ -34,11 +21,14 @@ export async function generateMetadata({ params }: PageProps) {
 
 export default async function CategoryPage({ params }: PageProps) {
   const { slug } = await params;
-  const category = getCategoryBySlug(slug);
+
+  const [category, posts] = await Promise.all([
+    getCategoryBySlug(slug),
+    getPostsByCategory(slug),
+  ]);
 
   if (!category) notFound();
 
-  const posts = getPostsByCategory(slug);
   const allPosts = posts.length > 0 ? posts : [];
 
   return (
@@ -55,8 +45,8 @@ export default async function CategoryPage({ params }: PageProps) {
 
         {/* Header */}
         <div className="flex items-start gap-5 mb-10">
-          <div className="w-14 h-14 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
-            {iconMap[category.icon]}
+          <div className="w-14 h-14 rounded-2xl bg-muted flex items-center justify-center shrink-0 text-muted-foreground">
+            {getCategoryIcon(category.icon, "w-6 h-6")}
           </div>
           <div>
             <h1 className="font-heading text-4xl mb-1">{category.name}</h1>
