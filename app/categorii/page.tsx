@@ -1,33 +1,16 @@
 import Link from "next/link";
-import { ArrowRight, Cpu, TrendingUp, Share2, ShoppingCart, User, Briefcase, Monitor } from "lucide-react";
-import { categories, blogPosts } from "@/lib/data";
+import { ArrowRight } from "lucide-react";
+import { getCategories, getPosts } from "@/lib/queries";
+import { getCategoryIcon, categoryIconHoverMap } from "@/lib/category-icons";
 
 export const metadata = {
   title: "Categorii – DigitalTrendz",
   description: "Explorează articolele organizate pe categorii: AI, Marketing Digital, Social Media și multe altele.",
 };
 
-const iconMap: Record<string, React.ReactNode> = {
-  cpu: <Cpu className="w-6 h-6" />,
-  "trending-up": <TrendingUp className="w-6 h-6" />,
-  "share-2": <Share2 className="w-6 h-6" />,
-  "shopping-cart": <ShoppingCart className="w-6 h-6" />,
-  user: <User className="w-6 h-6" />,
-  briefcase: <Briefcase className="w-6 h-6" />,
-  monitor: <Monitor className="w-6 h-6" />,
-};
+export default async function CategoriiPage() {
+  const [categories, posts] = await Promise.all([getCategories(), getPosts()]);
 
-const categoryColors: Record<string, string> = {
-  "cpu": "bg-blue-50 text-blue-600",
-  "trending-up": "bg-green-50 text-green-600",
-  "share-2": "bg-pink-50 text-pink-600",
-  "shopping-cart": "bg-orange-50 text-orange-600",
-  "user": "bg-purple-50 text-purple-600",
-  "briefcase": "bg-yellow-50 text-yellow-600",
-  "monitor": "bg-cyan-50 text-cyan-600",
-};
-
-export default function CategoriiPage() {
   return (
     <main className="flex-1">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -40,15 +23,15 @@ export default function CategoriiPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {categories.map((cat) => {
-            const latestPost = blogPosts.find((p) => p.category === cat.name);
+            const latestPost = posts.find((p) => p.category === cat.name);
             return (
               <Link
                 key={cat.slug}
                 href={`/categorii/${cat.slug}`}
                 className="group block p-6 rounded-2xl border border-border hover:border-foreground/20 hover:shadow-md transition-all bg-card"
               >
-                <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${categoryColors[cat.icon] ?? "bg-muted text-muted-foreground"}`}>
-                  {iconMap[cat.icon]}
+                <div className="w-12 h-12 rounded-xl bg-muted flex items-center justify-center mb-4 text-muted-foreground">
+                  {getCategoryIcon(cat.icon, `w-6 h-6 transition-[color,filter] duration-300 ease-out [filter:drop-shadow(0_0_0px_transparent)] ${categoryIconHoverMap[cat.icon] ?? ""} group-hover:[filter:drop-shadow(0_0_5px_currentColor)]`)}
                 </div>
                 <h2 className="font-heading text-xl mb-1 group-hover:text-blue-600 transition-colors">
                   {cat.name}
