@@ -14,41 +14,7 @@ import {
   DialogDescription,
   DialogTrigger,
 } from "@/components/ui/dialog";
-
-const navItems = [
-  { label: "Acasă", href: "/" },
-  {
-    label: "Articole",
-    href: "/articole",
-    children: [
-      { label: "Toate articolele", href: "/articole" },
-      { label: "Cele mai citite", href: "/articole/populare" },
-      { label: "Recente", href: "/articole/recente" },
-    ],
-  },
-  {
-    label: "Categorii",
-    href: "/categorii",
-    children: [
-      { label: "AI & Tehnologie", href: "/categorii/ai-tehnologie" },
-      { label: "Marketing Digital", href: "/categorii/marketing-digital" },
-      { label: "Social Media", href: "/categorii/social-media" },
-      { label: "E-commerce", href: "/categorii/e-commerce" },
-      { label: "Dezvoltare Personală", href: "/categorii/dezvoltare-personala" },
-    ],
-  },
-  {
-    label: "Resurse",
-    href: "/resurse",
-    children: [
-      { label: "Ghiduri", href: "/resurse/ghiduri" },
-      { label: "Studii de caz", href: "/resurse/studii-de-caz" },
-      { label: "Tools & Softwares", href: "/resurse/tools" },
-    ],
-  },
-  { label: "Despre", href: "/despre" },
-  { label: "Contact", href: "/contact" },
-];
+import type { Category } from "@/lib/types";
 
 function SubscribeModal() {
   const [email, setEmail] = useState("");
@@ -78,7 +44,6 @@ function SubscribeModal() {
         </div>
       ) : (
         <>
-          {/* Header banner */}
           <div className="bg-foreground text-background px-8 pt-8 pb-6">
             <div className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center mb-4">
               <Mail className="w-5 h-5 text-background" />
@@ -90,8 +55,6 @@ function SubscribeModal() {
               Primești săptămânal cele mai bune articole despre tehnologie, marketing și inovație digitală — direct în inbox.
             </DialogDescription>
           </div>
-
-          {/* Form */}
           <form onSubmit={handleSubmit} className="px-8 py-6 space-y-4">
             <div>
               <label className="text-xs font-medium text-muted-foreground uppercase tracking-wide mb-1.5 block">
@@ -141,15 +104,50 @@ function SubscribeModal() {
   );
 }
 
-export default function Navbar() {
+interface NavbarProps {
+  categories: Category[];
+}
+
+export default function Navbar({ categories }: NavbarProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+
+  const navItems = [
+    { label: "Acasă", href: "/" },
+    {
+      label: "Articole",
+      href: "/articole",
+      children: [
+        { label: "Toate articolele", href: "/articole" },
+        { label: "Cele mai citite", href: "/articole/populare" },
+        { label: "Recente", href: "/articole/recente" },
+      ],
+    },
+    {
+      label: "Categorii",
+      href: "/categorii",
+      children: categories.map((cat) => ({
+        label: cat.name,
+        href: `/categorii/${cat.slug}`,
+      })),
+    },
+    {
+      label: "Resurse",
+      href: "/resurse",
+      children: [
+        { label: "Ghiduri", href: "/resurse/ghiduri" },
+        { label: "Studii de caz", href: "/resurse/studii-de-caz" },
+        { label: "Tools & Softwares", href: "/resurse/tools" },
+      ],
+    },
+    { label: "Despre", href: "/despre" },
+    { label: "Contact", href: "/contact" },
+  ];
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
-          {/* Logo */}
           <Link href="/" className="flex items-center h-20 overflow-hidden">
             <Image
               src="/logo-text.png"
@@ -161,7 +159,6 @@ export default function Navbar() {
             />
           </Link>
 
-          {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-1">
             {navItems.map((item) =>
               item.children ? (
@@ -201,7 +198,6 @@ export default function Navbar() {
             )}
           </nav>
 
-          {/* Right side */}
           <div className="flex items-center gap-3">
             <button className="hidden md:flex items-center justify-center w-9 h-9 rounded-md hover:bg-accent transition-colors">
               <Search className="w-4 h-4 text-foreground/70" />
@@ -226,7 +222,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile menu */}
       {mobileOpen && (
         <div className="md:hidden border-t border-border bg-background">
           <div className="px-4 py-3 space-y-1">
