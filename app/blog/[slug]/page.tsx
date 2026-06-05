@@ -6,19 +6,20 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button, buttonVariants } from "@/components/ui/button";
 import ArticleCard from "@/components/article-card";
 import NewsletterSection from "@/components/newsletter-section";
-import { blogPosts, getPostBySlug, getRelatedPosts } from "@/lib/data";
+import { getAllPostSlugs, getPostBySlug, getRelatedPosts } from "@/lib/queries";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
 export async function generateStaticParams() {
-  return blogPosts.map((post) => ({ slug: post.slug }));
+  const slugs = await getAllPostSlugs();
+  return slugs.map((s) => ({ slug: s.slug }));
 }
 
 export async function generateMetadata({ params }: PageProps) {
   const { slug } = await params;
-  const post = getPostBySlug(slug);
+  const post = await getPostBySlug(slug);
   if (!post) return {};
   return {
     title: `${post.title} – DigitalTrendz`,
@@ -28,13 +29,11 @@ export async function generateMetadata({ params }: PageProps) {
 
 export default async function BlogPostPage({ params }: PageProps) {
   const { slug } = await params;
-  const post = getPostBySlug(slug);
+  const post = await getPostBySlug(slug);
 
   if (!post) notFound();
 
-  const relatedPosts = getRelatedPosts(slug, post.category);
-  const fallbackRelated = blogPosts.filter((p) => p.slug !== slug).slice(0, 3);
-  const displayRelated = relatedPosts.length > 0 ? relatedPosts : fallbackRelated;
+  const displayRelated = await getRelatedPosts(slug, post.categorySlug);
 
   const contentParagraphs = post.content
     .trim()
