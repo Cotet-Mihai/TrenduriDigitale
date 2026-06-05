@@ -24,12 +24,20 @@ function slugify(text: string): string {
 }
 
 function extractHeadings(content: string): { id: string; text: string }[] {
+  const counts: Record<string, number> = {};
   return content
     .split("\n")
     .filter((line) => /^## /.test(line))
     .map((line) => {
-      const text = line.replace(/^## /, "").trim();
-      return { id: slugify(text), text };
+      const raw = line.replace(/^## /, "").trim();
+      const text = raw
+        .replace(/!\[.*?\]\(.*?\)/g, "")        // strip images
+        .replace(/\[(.*?)\]\(.*?\)/g, "$1")      // strip links, keep text
+        .trim();
+      const base = slugify(text);
+      counts[base] = (counts[base] ?? 0) + 1;
+      const id = counts[base] === 1 ? base : `${base}-${counts[base]}`;
+      return { id, text };
     });
 }
 
@@ -125,6 +133,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                 <span className="text-xs text-muted-foreground mr-1">Distribuie articolul</span>
                 {/* LinkedIn */}
                 <button
+                  type="button"
                   className="w-8 h-8 rounded-md border border-border/60 flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground/40 transition-colors"
                   aria-label="LinkedIn"
                 >
@@ -136,6 +145,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                 </button>
                 {/* Facebook */}
                 <button
+                  type="button"
                   className="w-8 h-8 rounded-md border border-border/60 flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground/40 transition-colors"
                   aria-label="Facebook"
                 >
@@ -145,6 +155,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                 </button>
                 {/* X (Twitter) */}
                 <button
+                  type="button"
                   className="w-8 h-8 rounded-md border border-border/60 flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground/40 transition-colors"
                   aria-label="X / Twitter"
                 >
@@ -152,6 +163,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                 </button>
                 {/* Copy link */}
                 <button
+                  type="button"
                   className="w-8 h-8 rounded-md border border-border/60 flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground/40 transition-colors"
                   aria-label="Copiază link"
                 >
@@ -247,7 +259,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             {/* Tags */}
             <div className="flex items-center gap-2 mt-10 pt-6 border-t border-border/60 flex-wrap">
               <span className="text-sm font-medium text-muted-foreground">Etichete:</span>
-              {[post.category, "Digital", "2024"].map((tag) => (
+              {Array.from(new Set([post.category, "Digital", "2024"])).map((tag) => (
                 <span
                   key={tag}
                   className="text-xs bg-muted px-3 py-1 rounded-full text-muted-foreground hover:bg-muted/80 cursor-pointer transition-colors"
