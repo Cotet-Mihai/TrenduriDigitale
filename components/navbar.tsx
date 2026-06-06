@@ -3,17 +3,25 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { Search, Menu, X, ChevronDown, Send, CheckCircle, Mail } from "lucide-react";
+import { Search, Menu, X, Send, CheckCircle, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
   Dialog,
   DialogContent,
-  DialogHeader,
   DialogTitle,
   DialogDescription,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu";
 import type { Category } from "@/lib/types";
 
 function SubscribeModal() {
@@ -110,44 +118,20 @@ interface NavbarProps {
 
 export default function Navbar({ categories }: NavbarProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
-  const navItems = [
-    { label: "Acasă", href: "/" },
-    {
-      label: "Articole",
-      href: "/articole",
-      children: [
-        { label: "Toate articolele", href: "/articole" },
-        { label: "Cele mai citite", href: "/articole/populare" },
-        { label: "Recente", href: "/articole/recente" },
-      ],
-    },
-    {
-      label: "Categorii",
-      href: "/categorii",
-      children: categories.map((cat) => ({
-        label: cat.name,
-        href: `/categorii/${cat.slug}`,
-      })),
-    },
-    {
-      label: "Resurse",
-      href: "/resurse",
-      children: [
-        { label: "Ghiduri", href: "/resurse/ghiduri" },
-        { label: "Studii de caz", href: "/resurse/studii-de-caz" },
-        { label: "Tools & Softwares", href: "/resurse/tools" },
-      ],
-    },
-    { label: "Despre", href: "/despre" },
-    { label: "Contact", href: "/contact" },
+  const articoleItems = [
+    { label: "Toate articolele", href: "/articole" },
+    { label: "Cele mai citite", href: "/articole/populare" },
+    { label: "Recente", href: "/articole/recente" },
   ];
+
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
+
+          {/* Logo */}
           <Link href="/" className="flex items-center h-20 overflow-hidden">
             <Image
               src="/logo-text.png"
@@ -159,45 +143,64 @@ export default function Navbar({ categories }: NavbarProps) {
             />
           </Link>
 
-          <nav className="hidden md:flex items-center gap-1">
-            {navItems.map((item) =>
-              item.children ? (
-                <div
-                  key={item.label}
-                  className="relative"
-                  onMouseEnter={() => setOpenDropdown(item.label)}
-                  onMouseLeave={() => setOpenDropdown(null)}
-                >
-                  <button className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors rounded-md hover:bg-accent">
-                    {item.label}
-                    <ChevronDown className="w-3 h-3" />
-                  </button>
-                  {openDropdown === item.label && (
-                    <div className="absolute top-full left-0 mt-1 w-48 bg-background border border-border rounded-lg shadow-lg py-1 z-50">
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.href}
-                          href={child.href}
-                          className="block px-4 py-2 text-sm text-foreground/80 hover:text-foreground hover:bg-accent transition-colors"
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ) : (
-                <Link
-                  key={item.label}
-                  href={item.href}
-                  className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors rounded-md hover:bg-accent"
-                >
-                  {item.label}
-                </Link>
-              )
-            )}
-          </nav>
+          {/* Desktop nav */}
+          <div className="hidden md:flex">
+            <NavigationMenu>
+              <NavigationMenuList>
 
+                <NavigationMenuItem>
+                  <Link href="/" className={navigationMenuTriggerStyle()}>
+                    Acasă
+                  </Link>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger>Articole</NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="w-48 p-1">
+                      {articoleItems.map((item) => (
+                        <li key={item.href}>
+                          <NavigationMenuLink render={<Link href={item.href} />}>
+                            {item.label}
+                          </NavigationMenuLink>
+                        </li>
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger>Categorii</NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="w-52 p-1">
+                      {categories.map((cat) => (
+                        <li key={cat.slug}>
+                          <NavigationMenuLink render={<Link href={`/categorii/${cat.slug}`} />}>
+                            {cat.name}
+                          </NavigationMenuLink>
+                        </li>
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <Link href="/despre" className={navigationMenuTriggerStyle()}>
+                    Despre
+                  </Link>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <Link href="/contact" className={navigationMenuTriggerStyle()}>
+                    Contact
+                  </Link>
+                </NavigationMenuItem>
+
+              </NavigationMenuList>
+            </NavigationMenu>
+          </div>
+
+          {/* Right actions */}
           <div className="flex items-center gap-3">
             <button className="hidden md:flex items-center justify-center w-9 h-9 rounded-md hover:bg-accent transition-colors">
               <Search className="w-4 h-4 text-foreground/70" />
@@ -219,15 +222,23 @@ export default function Navbar({ categories }: NavbarProps) {
               {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
           </div>
+
         </div>
       </div>
 
+      {/* Mobile menu */}
       {mobileOpen && (
         <div className="md:hidden border-t border-border bg-background">
           <div className="px-4 py-3 space-y-1">
-            {navItems.map((item) => (
+            {[
+              { label: "Acasă", href: "/" },
+              { label: "Articole", href: "/articole" },
+              { label: "Categorii", href: "/categorii" },
+              { label: "Despre", href: "/despre" },
+              { label: "Contact", href: "/contact" },
+            ].map((item) => (
               <Link
-                key={item.label}
+                key={item.href}
                 href={item.href}
                 className="block px-3 py-2 text-sm font-medium rounded-md hover:bg-accent transition-colors"
                 onClick={() => setMobileOpen(false)}

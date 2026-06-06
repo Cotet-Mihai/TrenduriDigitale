@@ -1,4 +1,4 @@
-export const metadata = { title: "Termeni și condiții – DigitalTrendz" };
+export const metadata = { title: "Termeni și condiții – TrenduriDigitale" };
 
 export default function TermeniPage() {
   return (
@@ -15,7 +15,7 @@ export default function TermeniPage() {
 
           <section>
             <h2 className="font-heading text-xl text-foreground mb-3">2. Proprietate intelectuală</h2>
-            <p className="text-muted-foreground">Tot conținutul publicat pe DigitalTrendz (articole, imagini, grafice, logo-uri) este proprietatea DigitalTrendz sau a autorilor respectivi și este protejat de legile drepturilor de autor. Reproducerea parțială sau totală fără acordul nostru scris este interzisă.</p>
+            <p className="text-muted-foreground">Tot conținutul publicat pe TrenduriDigitale (articole, imagini, grafice, logo-uri) este proprietatea TrenduriDigitale sau a autorilor respectivi și este protejat de legile drepturilor de autor. Reproducerea parțială sau totală fără acordul nostru scris este interzisă.</p>
           </section>
 
           <section>
@@ -29,7 +29,7 @@ export default function TermeniPage() {
 
           <section>
             <h2 className="font-heading text-xl text-foreground mb-3">4. Disclaimer</h2>
-            <p className="text-muted-foreground">Conținutul publicat pe DigitalTrendz are scop informativ și educațional. Nu constituie consultanță financiară, juridică sau de altă natură. Deciziile luate pe baza informațiilor de pe site sunt responsabilitatea exclusivă a utilizatorului.</p>
+            <p className="text-muted-foreground">Conținutul publicat pe TrenduriDigitale are scop informativ și educațional. Nu constituie consultanță financiară, juridică sau de altă natură. Deciziile luate pe baza informațiilor de pe site sunt responsabilitatea exclusivă a utilizatorului.</p>
           </section>
 
           <section>

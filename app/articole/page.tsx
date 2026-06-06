@@ -2,7 +2,7 @@ import ArticlesGrid from "@/components/articles-grid";
 import { getPosts, getCategories } from "@/lib/queries";
 
 export const metadata = {
-  title: "Articole – DigitalTrendz",
+  title: "Articole – TrenduriDigitale",
   description: "Toate articolele despre tehnologie, marketing digital, social media și inovație.",
 };
 

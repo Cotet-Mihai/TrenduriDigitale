@@ -1,4 +1,4 @@
-export const metadata = { title: "Politica de confidențialitate – DigitalTrendz" };
+export const metadata = { title: "Politica de confidențialitate – TrenduriDigitale" };
 
 export default function PoliticaConfidentialitatePage() {
   return (
@@ -10,7 +10,7 @@ export default function PoliticaConfidentialitatePage() {
         <div className="space-y-8 text-sm leading-relaxed text-foreground/80">
           <section>
             <h2 className="font-heading text-xl text-foreground mb-3">1. Introducere</h2>
-            <p>DigitalTrendz ("noi", "ne") operează site-ul digitaltrendz.ro. Această politică explică cum colectăm, utilizăm și protejăm datele tale personale când vizitezi site-ul nostru.</p>
+            <p>TrenduriDigitale ("noi", "ne") operează site-ul digitaltrendz.ro. Această politică explică cum colectăm, utilizăm și protejăm datele tale personale când vizitezi site-ul nostru.</p>
           </section>
 
           <section>

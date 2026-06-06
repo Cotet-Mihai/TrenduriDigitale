@@ -23,6 +23,7 @@ function mapPost(row: any): BlogPost {
     author: {
       name: row.authors?.name ?? '',
       avatar: row.authors?.avatar_url ?? '',
+      bio: row.authors?.bio ?? '',
     },
     date: formatDate(row.published_at),
     readTime: row.read_time ?? 0,
@@ -33,7 +34,7 @@ function mapPost(row: any): BlogPost {
 }
 
 const POST_SELECT =
-  'id, slug, title, excerpt, content, published_at, read_time, image_url, views, featured, categories(name, slug), authors(name, avatar_url)';
+  'id, slug, title, excerpt, content, published_at, read_time, image_url, views, featured, categories(name, slug), authors(name, avatar_url, bio)';
 
 // ─── Categories ────────────────────────────────────────────────────────────
 
@@ -61,7 +62,7 @@ export const getCategories = unstable_cache(
     }));
   },
   ['getCategories'],
-  { tags: ['categories'] }
+  { tags: ['categories'], revalidate: 600 }
 );
 
 export function getCategoryBySlug(slug: string): Promise<Category | null> {
@@ -71,7 +72,7 @@ export function getCategoryBySlug(slug: string): Promise<Category | null> {
       return cats.find((c) => c.slug === slug) ?? null;
     },
     ['getCategoryBySlug', slug],
-    { tags: ['categories'] }
+    { tags: ['categories'], revalidate: 600 }
   )();
 }
 
@@ -88,7 +89,7 @@ export const getPosts = unstable_cache(
     return (data ?? []).map(mapPost);
   },
   ['getPosts'],
-  { tags: ['posts'] }
+  { tags: ['posts'], revalidate: 600 }
 );
 
 export const getFeaturedPost = unstable_cache(
@@ -105,7 +106,7 @@ export const getFeaturedPost = unstable_cache(
     return data ? mapPost(data) : null;
   },
   ['getFeaturedPost'],
-  { tags: ['posts'] }
+  { tags: ['posts'], revalidate: 600 }
 );
 
 export function getRecentPosts(limit = 10): Promise<BlogPost[]> {
@@ -121,7 +122,7 @@ export function getRecentPosts(limit = 10): Promise<BlogPost[]> {
       return (data ?? []).map(mapPost);
     },
     ['getRecentPosts', String(limit)],
-    { tags: ['posts'] }
+    { tags: ['posts'], revalidate: 600 }
   )();
 }
 
@@ -138,7 +139,7 @@ export function getPopularPosts(limit = 10): Promise<BlogPost[]> {
       return (data ?? []).map(mapPost);
     },
     ['getPopularPosts', String(limit)],
-    { tags: ['posts'] }
+    { tags: ['posts'], revalidate: 600 }
   )();
 }
 
@@ -155,7 +156,7 @@ export function getPostBySlug(slug: string): Promise<BlogPost | null> {
       return data ? mapPost(data) : null;
     },
     ['getPostBySlug', slug],
-    { tags: ['posts', `post-${slug}`] }
+    { tags: ['posts', `post-${slug}`], revalidate: 3600 }
   )();
 }
 
@@ -181,7 +182,7 @@ export function getRelatedPosts(currentSlug: string, categorySlug: string): Prom
       return (data ?? []).map(mapPost);
     },
     ['getRelatedPosts', currentSlug, categorySlug],
-    { tags: ['posts'] }
+    { tags: ['posts'], revalidate: 3600 }
   )();
 }
 
@@ -205,9 +206,30 @@ export function getPostsByCategory(categorySlug: string): Promise<BlogPost[]> {
       return (data ?? []).map(mapPost);
     },
     ['getPostsByCategory', categorySlug],
-    { tags: ['posts', 'categories'] }
+    { tags: ['posts', 'categories'], revalidate: 600 }
   )();
 }
+
+export const getSiteStats = unstable_cache(
+  async (): Promise<{ totalPosts: number; totalViews: number; totalAuthors: number; totalCategories: number }> => {
+    const [{ count: posts }, { data: viewsData }, { count: authors }, { count: categories }] =
+      await Promise.all([
+        supabase.from('posts').select('*', { count: 'exact', head: true }).not('published_at', 'is', null),
+        supabase.from('posts').select('views').not('published_at', 'is', null),
+        supabase.from('authors').select('*', { count: 'exact', head: true }),
+        supabase.from('categories').select('*', { count: 'exact', head: true }),
+      ]);
+    const totalViews = (viewsData ?? []).reduce((sum, p) => sum + (p.views ?? 0), 0);
+    return {
+      totalPosts: posts ?? 0,
+      totalViews,
+      totalAuthors: authors ?? 0,
+      totalCategories: categories ?? 0,
+    };
+  },
+  ['getSiteStats'],
+  { tags: ['posts', 'categories'], revalidate: 600 }
+);
 
 export const getAllPostSlugs = unstable_cache(
   async (): Promise<{ slug: string }[]> => {
@@ -219,5 +241,5 @@ export const getAllPostSlugs = unstable_cache(
     return data ?? [];
   },
   ['getAllPostSlugs'],
-  { tags: ['posts'] }
+  { tags: ['posts'], revalidate: 600 }
 );

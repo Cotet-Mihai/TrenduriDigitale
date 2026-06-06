@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight, Zap, Target, Users, BookOpen } from "lucide-react";
 
 import NewsletterSection from "@/components/newsletter-section";
+import { getSiteStats } from "@/lib/queries";
 
 export const metadata = {
   title: "Despre noi – TrenduriDigitale",
@@ -32,7 +33,16 @@ const values = [
   },
 ];
 
-export default function DesprePage() {
+export default async function DesprePage() {
+  const stats = await getSiteStats();
+
+  const statCards = [
+    { number: stats.totalViews.toLocaleString("ro-RO"), label: "Vizualizări totale" },
+    { number: String(stats.totalPosts), label: "Articole publicate" },
+    { number: String(stats.totalAuthors), label: stats.totalAuthors === 1 ? "Autor" : "Autori" },
+    { number: String(stats.totalCategories), label: "Categorii acoperite" },
+  ];
+
   return (
     <main className="flex-1">
       {/* Hero */}
@@ -76,12 +86,7 @@ export default function DesprePage() {
             </Link>
           </div>
           <div className="grid grid-cols-2 gap-4">
-            {[
-              { number: "50K+", label: "Cititori lunari" },
-              { number: "120+", label: "Articole publicate" },
-              { number: "1", label: "Autor" },
-              { number: "5", label: "Categorii acoperite" },
-            ].map((stat) => (
+            {statCards.map((stat) => (
               <div key={stat.label} className="p-6 rounded-2xl border border-border bg-card text-center">
                 <p className="font-heading text-4xl mb-1">{stat.number}</p>
                 <p className="text-sm text-muted-foreground">{stat.label}</p>

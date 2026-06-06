@@ -1,32 +1,19 @@
 import Link from "next/link";
 import Image from "next/image";
+import { getCategories } from "@/lib/queries";
 
 const navLinks = [
   { label: "Acasă", href: "/" },
   { label: "Articole", href: "/articole" },
   { label: "Categorii", href: "/categorii" },
-  { label: "Resurse", href: "/resurse" },
   { label: "Despre", href: "/despre" },
   { label: "Contact", href: "/contact" },
 ];
 
-const categoryLinks = [
-  { label: "AI & Tehnologie", href: "/categorii/ai-tehnologie" },
-  { label: "Marketing Digital", href: "/categorii/marketing-digital" },
-  { label: "Social Media", href: "/categorii/social-media" },
-  { label: "E-commerce", href: "/categorii/e-commerce" },
-  { label: "Dezvoltare Personală", href: "/categorii/dezvoltare-personala" },
-];
 
-const resourceLinks = [
-  { label: "Ghiduri", href: "/resurse/ghiduri" },
-  { label: "Studii de caz", href: "/resurse/studii-de-caz" },
-  { label: "Tools & Softwares", href: "/resurse/tools" },
-  { label: "Evenimente", href: "/resurse/evenimente" },
-  { label: "Cărți recomandate", href: "/resurse/carti" },
-];
+export default async function Footer() {
+  const categories = await getCategories();
 
-export default function Footer() {
   return (
     <footer className="bg-foreground text-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
@@ -37,9 +24,9 @@ export default function Footer() {
               <Image
                 src="/logo-text.png"
                 alt="TrenduriDigitale"
-                width={180}
-                height={40}
-                className="h-10 w-auto"
+                width={400}
+                height={100}
+                className="h-24 w-auto"
               />
             </Link>
             <p className="text-sm text-background/60 leading-relaxed">
@@ -65,24 +52,10 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-sm text-background mb-4">Categorii</h4>
             <ul className="space-y-2">
-              {categoryLinks.map((link) => (
-                <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-background/60 hover:text-background transition-colors">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Resurse */}
-          <div>
-            <h4 className="font-semibold text-sm text-background mb-4">Resurse</h4>
-            <ul className="space-y-2">
-              {resourceLinks.map((link) => (
-                <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-background/60 hover:text-background transition-colors">
-                    {link.label}
+              {categories.map((cat) => (
+                <li key={cat.slug}>
+                  <Link href={`/categorii/${cat.slug}`} className="text-sm text-background/60 hover:text-background transition-colors">
+                    {cat.name}
                   </Link>
                 </li>
               ))}
@@ -118,7 +91,7 @@ export default function Footer() {
       <div className="border-t border-background/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-2">
           <p className="text-xs text-background/50">
-            © 2024 DigitalTrendz. Toate drepturile rezervate.
+            © 2024 TrenduriDigitale. Toate drepturile rezervate.
           </p>
           <div className="flex gap-4">
             <Link href="/politica-confidentialitate" className="text-xs text-background/50 hover:text-background/80 transition-colors">

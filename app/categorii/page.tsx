@@ -4,7 +4,7 @@ import { getCategories, getPosts } from "@/lib/queries";
 import { getCategoryIcon, categoryIconHoverMap } from "@/lib/category-icons";
 
 export const metadata = {
-  title: "Categorii – DigitalTrendz",
+  title: "Categorii – TrenduriDigitale",
   description: "Explorează articolele organizate pe categorii: AI, Marketing Digital, Social Media și multe altele.",
 };
 

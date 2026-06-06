@@ -2,8 +2,8 @@ import { Mail, MapPin, Clock } from "lucide-react";
 import ContactForm from "@/components/contact-form";
 
 export const metadata = {
-  title: "Contact – DigitalTrendz",
-  description: "Contactează echipa DigitalTrendz pentru colaborări, întrebări sau propuneri editoriale.",
+  title: "Contact – TrenduriDigitale",
+  description: "Contactează echipa TrenduriDigitale pentru colaborări, întrebări sau propuneri editoriale.",
 };
 
 export default function ContactPage() {
@@ -27,8 +27,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <p className="font-semibold text-sm mb-1">Email</p>
-                  <p className="text-sm text-muted-foreground">redactie@digitaltrendz.ro</p>
-                  <p className="text-sm text-muted-foreground">parteneriate@digitaltrendz.ro</p>
+                  <p className="text-sm text-muted-foreground">redactia@trenduridigitale.ro</p>
                 </div>
               </div>
             </div>

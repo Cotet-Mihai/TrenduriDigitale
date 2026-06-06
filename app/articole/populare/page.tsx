@@ -2,7 +2,7 @@ import ArticlesGrid from "@/components/articles-grid";
 import { getPopularPosts, getCategories } from "@/lib/queries";
 
 export const metadata = {
-  title: "Cele mai citite – DigitalTrendz",
+  title: "Cele mai citite – TrenduriDigitale",
 };
 
 export default async function ArticolePopularePage() {

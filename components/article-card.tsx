@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Badge } from "@/components/ui/badge";
+import { Eye } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import type { BlogPost } from "@/lib/types";
 
@@ -47,6 +47,10 @@ export default function ArticleCard({ post }: ArticleCardProps) {
             <span className="text-xs text-muted-foreground">{post.date}</span>
             <span className="text-xs text-muted-foreground/50">·</span>
             <span className="text-xs text-muted-foreground">{post.readTime} min read</span>
+            <span className="text-xs text-muted-foreground/50 ml-auto flex items-center gap-1">
+              <Eye className="w-3 h-3" />
+              {post.views.toLocaleString("ro-RO")}
+            </span>
           </div>
         </div>
       </div>

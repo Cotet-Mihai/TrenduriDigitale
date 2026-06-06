@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: PageProps) {
   const cat = await getCategoryBySlug(slug);
   if (!cat) return {};
   return {
-    title: `${cat.name} – DigitalTrendz`,
+    title: `${cat.name} – TrenduriDigitale`,
     description: cat.description,
   };
 }

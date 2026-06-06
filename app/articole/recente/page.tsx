@@ -2,7 +2,7 @@ import ArticlesGrid from "@/components/articles-grid";
 import { getRecentPosts, getCategories } from "@/lib/queries";
 
 export const metadata = {
-  title: "Articole recente – DigitalTrendz",
+  title: "Articole recente – TrenduriDigitale",
 };
 
 export default async function ArticoleRecentePage() {

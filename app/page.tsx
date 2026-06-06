@@ -1,24 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Play, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronRight, Eye } from "lucide-react";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import ArticleCard from "@/components/article-card";
 import NewsletterSection from "@/components/newsletter-section";
-import { getFeaturedPost, getRecentPosts, getCategories } from "@/lib/queries";
+import { getPopularPosts, getRecentPosts, getCategories } from "@/lib/queries";
 import { getCategoryIcon, categoryIconHoverMap } from "@/lib/category-icons";
 
 export default async function HomePage() {
-  const [featured, recent, categories] = await Promise.all([
-    getFeaturedPost(),
-    getRecentPosts(7),
+  const [popular, recent, categories] = await Promise.all([
+    getPopularPosts(1),
+    getRecentPosts(10),
     getCategories(),
   ]);
 
-  const displayFeatured = featured ?? recent[0];
+  const displayFeatured = popular[0] ?? recent[0];
   const others = recent.filter((p) => p.id !== displayFeatured?.id);
   const recommended = others.slice(0, 3);
-  const latest = others.slice(3, 6);
+  const latest = others.length > 3 ? others.slice(3, 6) : others.slice(0, 3);
 
   if (!displayFeatured) return null;
 
@@ -32,9 +32,11 @@ export default async function HomePage() {
             <span className="text-xs font-bold uppercase tracking-widest text-blue-600">
               Trending acum
             </span>
-            <h1 className="font-heading text-4xl lg:text-5xl leading-tight">
-              {displayFeatured.title}
-            </h1>
+            <Link href={`/blog/${displayFeatured.slug}`} className="hover:text-blue-600 transition-colors">
+              <h1 className="font-heading text-4xl lg:text-5xl leading-tight">
+                {displayFeatured.title}
+              </h1>
+            </Link>
             <p className="text-muted-foreground text-base leading-relaxed max-w-lg">
               {displayFeatured.excerpt}
             </p>
@@ -45,12 +47,12 @@ export default async function HomePage() {
               >
                 Citește articolul <ArrowRight className="w-4 h-4" />
               </Link>
-              <button className="flex items-center gap-2 text-sm font-medium text-foreground/70 hover:text-foreground transition-colors">
-                <div className="w-8 h-8 rounded-full border-2 border-foreground/20 flex items-center justify-center">
-                  <Play className="w-3 h-3 fill-current ml-0.5" />
-                </div>
-                Vezi video
-              </button>
+              <Link
+                href="/articole"
+                className={buttonVariants({ variant: "outline", size: "lg" }) + " gap-2 h-11 px-6 rounded-lg"}
+              >
+                Vezi toate articolele <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
           </div>
 
@@ -67,6 +69,10 @@ export default async function HomePage() {
               <span className="bg-white/95 text-foreground text-[10px] font-bold uppercase tracking-wide px-3 py-1.5 rounded-full shadow-sm">
                 {displayFeatured.category}
               </span>
+            </div>
+            <div className="absolute bottom-4 right-4 flex items-center gap-1.5 bg-black/50 backdrop-blur-sm text-white text-xs font-medium px-2.5 py-1.5 rounded-full">
+              <Eye className="w-3.5 h-3.5" />
+              <span>{displayFeatured.views.toLocaleString("ro-RO")} vizualizări</span>
             </div>
           </div>
         </div>
@@ -153,6 +159,9 @@ export default async function HomePage() {
                       <span className="text-xs text-muted-foreground">{post.date}</span>
                       <span className="text-xs text-muted-foreground/40">·</span>
                       <span className="text-xs text-muted-foreground">{post.readTime} min read</span>
+                      <span className="text-xs text-muted-foreground/50">·</span>
+                      <Eye className="w-3 h-3 text-muted-foreground/50" />
+                      <span className="text-xs text-muted-foreground">{post.views.toLocaleString("ro-RO")}</span>
                     </div>
                   </div>
                   <div className="relative w-28 h-20 rounded-xl overflow-hidden shrink-0">
