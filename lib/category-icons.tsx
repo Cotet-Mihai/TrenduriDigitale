@@ -1,4 +1,4 @@
-import { Smartphone, Cpu, Brain, PenLine, Lightbulb, LucideIcon } from "lucide-react";
+import { Smartphone, Cpu, Brain, PenLine, Lightbulb, Code, LucideIcon } from "lucide-react";
 
 const icons: Record<string, LucideIcon> = {
   smartphone: Smartphone,
@@ -6,6 +6,7 @@ const icons: Record<string, LucideIcon> = {
   brain: Brain,
   "pen-line": PenLine,
   lightbulb: Lightbulb,
+  code: Code,
 };
 
 export function getCategoryIcon(name: string, className = "w-5 h-5"): React.ReactNode {
@@ -20,5 +21,6 @@ export const categoryIconHoverMap: Record<string, string> = {
   brain: "group-hover:text-purple-500",
   "pen-line": "group-hover:text-green-500",
   lightbulb: "group-hover:text-yellow-500",
+  code: "group-hover:text-cyan-500",
 };
 

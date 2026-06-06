@@ -4,8 +4,9 @@ import { getCategories, getPosts } from "@/lib/queries";
 import { getCategoryIcon, categoryIconHoverMap } from "@/lib/category-icons";
 
 export const metadata = {
-  title: "Categorii – TrenduriDigitale",
-  description: "Explorează articolele organizate pe categorii: AI, Marketing Digital, Social Media și multe altele.",
+  title: "Categorii",
+  description: "Explorează articolele organizate pe categorii: AI, Smartphone, Marketing Digital, Social Media și multe altele.",
+  alternates: { canonical: "https://trenduridigitale.ro/categorii" },
 };
 
 export default async function CategoriiPage() {

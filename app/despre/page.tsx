@@ -6,8 +6,9 @@ import NewsletterSection from "@/components/newsletter-section";
 import { getSiteStats } from "@/lib/queries";
 
 export const metadata = {
-  title: "Despre noi – TrenduriDigitale",
-  description: "TrenduriDigitale – sursa ta de inspirație pentru tot ce e nou în tehnologie, gadgeturi și inovație digitală.",
+  title: "Despre noi",
+  description: "Aflați povestea din spatele TrenduriDigitale — blogul românesc de tech cu sinceritate, fără clickbait și fără artificii.",
+  alternates: { canonical: "https://trenduridigitale.ro/despre" },
 };
 
 const values = [

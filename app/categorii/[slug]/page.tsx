@@ -5,6 +5,8 @@ import ArticleCard from "@/components/article-card";
 import { getCategoryBySlug, getPostsByCategory } from "@/lib/queries";
 import { getCategoryIcon } from "@/lib/category-icons";
 
+const BASE_URL = "https://trenduridigitale.ro";
+
 interface PageProps {
   params: Promise<{ slug: string }>;
 }
@@ -13,9 +15,18 @@ export async function generateMetadata({ params }: PageProps) {
   const { slug } = await params;
   const cat = await getCategoryBySlug(slug);
   if (!cat) return {};
+  const canonicalUrl = `${BASE_URL}/categorii/${slug}`;
   return {
-    title: `${cat.name} – TrenduriDigitale`,
-    description: cat.description,
+    title: cat.name,
+    description: cat.description || `Articole despre ${cat.name} pe TrenduriDigitale.`,
+    alternates: { canonical: canonicalUrl },
+    openGraph: {
+      type: "website",
+      url: canonicalUrl,
+      title: `${cat.name} – TrenduriDigitale`,
+      description: cat.description || `Articole despre ${cat.name} pe TrenduriDigitale.`,
+      siteName: "TrenduriDigitale",
+    },
   };
 }
 

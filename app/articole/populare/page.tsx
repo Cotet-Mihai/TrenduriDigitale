@@ -2,7 +2,9 @@ import ArticlesGrid from "@/components/articles-grid";
 import { getPopularPosts, getCategories } from "@/lib/queries";
 
 export const metadata = {
-  title: "Cele mai citite – TrenduriDigitale",
+  title: "Cele mai citite",
+  description: "Articolele care au generat cel mai mult interes pe TrenduriDigitale. Top articole după numărul de vizualizări.",
+  alternates: { canonical: "https://trenduridigitale.ro/articole/populare" },
 };
 
 export default async function ArticolePopularePage() {

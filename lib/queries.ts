@@ -42,7 +42,7 @@ export const getCategories = unstable_cache(
   async (): Promise<Category[]> => {
     const [{ data: cats, error: catsErr }, { data: posts, error: postsErr }] =
       await Promise.all([
-        supabase.from('categories').select('id, name, slug, icon, description').order('name'),
+        supabase.from('categories').select('id, name, slug, icon, description, sort_order').order('sort_order', { ascending: true }),
         supabase.from('posts').select('category_id').not('published_at', 'is', null),
       ]);
     if (catsErr) throw catsErr;

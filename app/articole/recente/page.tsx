@@ -2,7 +2,9 @@ import ArticlesGrid from "@/components/articles-grid";
 import { getRecentPosts, getCategories } from "@/lib/queries";
 
 export const metadata = {
-  title: "Articole recente – TrenduriDigitale",
+  title: "Articole recente",
+  description: "Ultimele articole publicate pe TrenduriDigitale. Proaspete din redacție, actualizate zilnic.",
+  alternates: { canonical: "https://trenduridigitale.ro/articole/recente" },
 };
 
 export default async function ArticoleRecentePage() {

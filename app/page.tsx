@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ChevronRight, Eye } from "lucide-react";
@@ -7,6 +8,12 @@ import ArticleCard from "@/components/article-card";
 import NewsletterSection from "@/components/newsletter-section";
 import { getPopularPosts, getRecentPosts, getCategories } from "@/lib/queries";
 import { getCategoryIcon, categoryIconHoverMap } from "@/lib/category-icons";
+
+const BASE_URL = "https://trenduridigitale.ro";
+
+export const metadata: Metadata = {
+  alternates: { canonical: BASE_URL },
+};
 
 export default async function HomePage() {
   const [popular, recent, categories] = await Promise.all([
@@ -22,8 +29,25 @@ export default async function HomePage() {
 
   if (!displayFeatured) return null;
 
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "TrenduriDigitale",
+    url: BASE_URL,
+    description: "Știri, opinii și analize despre smartphone-uri, gadgeturi, AI și inovație digitală.",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: { "@type": "EntryPoint", urlTemplate: `${BASE_URL}/articole?q={search_term_string}` },
+      "query-input": "required name=search_term_string",
+    },
+  };
+
   return (
     <main className="flex-1">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+      />
       {/* Hero */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">

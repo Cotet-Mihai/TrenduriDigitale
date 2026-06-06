@@ -2,8 +2,9 @@ import { Mail, MapPin, Clock } from "lucide-react";
 import ContactForm from "@/components/contact-form";
 
 export const metadata = {
-  title: "Contact – TrenduriDigitale",
-  description: "Contactează echipa TrenduriDigitale pentru colaborări, întrebări sau propuneri editoriale.",
+  title: "Contact",
+  description: "Contactează redacția TrenduriDigitale pentru colaborări, propuneri editoriale sau întrebări. Email: redactia@trenduridigitale.ro",
+  alternates: { canonical: "https://trenduridigitale.ro/contact" },
 };
 
 export default function ContactPage() {

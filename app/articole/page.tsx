@@ -2,8 +2,9 @@ import ArticlesGrid from "@/components/articles-grid";
 import { getPosts, getCategories } from "@/lib/queries";
 
 export const metadata = {
-  title: "Articole – TrenduriDigitale",
-  description: "Toate articolele despre tehnologie, marketing digital, social media și inovație.",
+  title: "Articole",
+  description: "Toate articolele despre tehnologie, smartphone-uri, AI, marketing digital și inovație. Actualizate zilnic.",
+  alternates: { canonical: "https://trenduridigitale.ro/articole" },
 };
 
 export default async function ArticolePage() {
