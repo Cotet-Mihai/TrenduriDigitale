@@ -139,6 +139,10 @@ export default function Navbar({ categories }: NavbarProps) {
   }, [mobileOpen]);
 
   const closeMobile = () => setMobileOpen(false);
+  const navigateAndClose = () => {
+    setMobileOpen(false);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   const articoleItems = [
     { label: "Toate articolele", href: "/articole", icon: BookOpen },
@@ -157,7 +161,7 @@ export default function Navbar({ categories }: NavbarProps) {
               opacity: mobileOpen ? 1 : 0,
               pointerEvents: mobileOpen ? "auto" : "none",
             }}
-            onClick={closeMobile}
+            onClick={navigateAndClose}
           />
 
           {/* Clip container — fixed below header, hides panel when translated up */}
@@ -180,7 +184,7 @@ export default function Navbar({ categories }: NavbarProps) {
 
                 <Link
                   href="/"
-                  onClick={closeMobile}
+                  onClick={navigateAndClose}
                   className="w-full text-center py-3.5 rounded-xl text-base font-medium transition-colors hover:bg-gray-100"
                   style={{ color: "#111" }}
                 >
@@ -212,7 +216,7 @@ export default function Navbar({ categories }: NavbarProps) {
                         <Link
                           key={item.href}
                           href={item.href}
-                          onClick={closeMobile}
+                          onClick={navigateAndClose}
                           className="w-full text-center py-2.5 rounded-lg text-sm transition-colors hover:bg-gray-100"
                           style={{ color: "#6b7280" }}
                         >
@@ -246,7 +250,7 @@ export default function Navbar({ categories }: NavbarProps) {
                     <div className="flex flex-col items-center gap-0.5 py-1">
                       <Link
                         href="/categorii"
-                        onClick={closeMobile}
+                        onClick={navigateAndClose}
                         className="w-full text-center py-2.5 rounded-lg text-sm font-medium transition-colors hover:bg-gray-100"
                         style={{ color: "#6b7280" }}
                       >
@@ -256,7 +260,7 @@ export default function Navbar({ categories }: NavbarProps) {
                         <Link
                           key={cat.slug}
                           href={`/categorii/${cat.slug}`}
-                          onClick={closeMobile}
+                          onClick={navigateAndClose}
                           className="w-full text-center py-2.5 rounded-lg text-sm transition-colors hover:bg-gray-100"
                           style={{ color: "#6b7280" }}
                         >
@@ -271,7 +275,7 @@ export default function Navbar({ categories }: NavbarProps) {
 
                 <Link
                   href="/despre"
-                  onClick={closeMobile}
+                  onClick={navigateAndClose}
                   className="w-full text-center py-3.5 rounded-xl text-base font-medium transition-colors hover:bg-gray-100"
                   style={{ color: "#111" }}
                 >
@@ -280,7 +284,7 @@ export default function Navbar({ categories }: NavbarProps) {
 
                 <Link
                   href="/contact"
-                  onClick={closeMobile}
+                  onClick={navigateAndClose}
                   className="w-full text-center py-3.5 rounded-xl text-base font-medium transition-colors hover:bg-gray-100"
                   style={{ color: "#111" }}
                 >
@@ -419,7 +423,7 @@ export default function Navbar({ categories }: NavbarProps) {
             {/* Right: logo on mobile, actions on desktop */}
             <div className="flex items-center gap-3">
               {/* Logo — mobile only */}
-              <Link href="/" className="md:hidden flex items-center h-20 overflow-hidden">
+              <Link href="/" className="md:hidden flex items-center h-20 overflow-hidden" onClick={navigateAndClose}>
                 <Image
                   src="/logo-text.png"
                   alt="TrenduriDigitale"

@@ -3,7 +3,8 @@ import { Inter, DM_Serif_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import { Analytics } from "@vercel/analytics/next";
+import AnalyticsWrapper from "@/components/analytics-wrapper";
+import CookieBanner from "@/components/cookie-banner";
 import { getCategories } from "@/lib/queries";
 
 const inter = Inter({
@@ -98,7 +99,8 @@ export default async function RootLayout({
         <Navbar categories={categories} />
         {children}
         <Footer />
-        <Analytics />
+        <CookieBanner />
+        <AnalyticsWrapper />
       </body>
     </html>
   );
