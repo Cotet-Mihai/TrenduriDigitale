@@ -313,8 +313,12 @@ export default function Navbar({ categories }: NavbarProps) {
 
   return (
     <>
-      <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 relative">
+        {/* White overlay — fades in on mobile when drawer opens */}
+        <div
+          className={`md:hidden absolute inset-0 bg-white pointer-events-none transition-opacity duration-300 ${mobileOpen ? "opacity-100" : "opacity-0"}`}
+        />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex h-20 items-center justify-between">
 
             {/* Left: hamburger on mobile, logo on desktop */}
