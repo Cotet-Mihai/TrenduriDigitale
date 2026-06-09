@@ -171,6 +171,7 @@ export default function Navbar({ categories }: NavbarProps) {
               style={{
                 backgroundColor: "white",
                 boxShadow: "0 10px 40px rgba(0,0,0,0.15)",
+                borderRadius: "0 0 1.25rem 1.25rem",
                 maxHeight: "calc(100vh - 80px)",
                 transform: mobileOpen ? "translateY(0)" : "translateY(-100%)",
               }}
