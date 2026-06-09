@@ -1,7 +1,8 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { Clock, Link2, X, ChevronRight, Eye } from "lucide-react";
+import { Clock, ChevronRight, Eye } from "lucide-react";
+import ShareButtons from "@/components/share-buttons";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { buttonVariants } from "@/components/ui/button";
 import NewsletterSection from "@/components/newsletter-section";
@@ -197,48 +198,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                 </div>
               </div>
 
-              {/* Share buttons — visual only */}
-              <div className="flex items-center gap-2">
-                <span className="text-xs text-muted-foreground mr-1">Distribuie articolul</span>
-                {/* LinkedIn */}
-                <button
-                  type="button"
-                  className="w-8 h-8 rounded-md border border-border/60 flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground/40 transition-colors"
-                  aria-label="LinkedIn"
-                >
-                  <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                    <rect x="2" y="9" width="4" height="12" />
-                    <circle cx="4" cy="4" r="2" />
-                  </svg>
-                </button>
-                {/* Facebook */}
-                <button
-                  type="button"
-                  className="w-8 h-8 rounded-md border border-border/60 flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground/40 transition-colors"
-                  aria-label="Facebook"
-                >
-                  <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                  </svg>
-                </button>
-                {/* X (Twitter) */}
-                <button
-                  type="button"
-                  className="w-8 h-8 rounded-md border border-border/60 flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground/40 transition-colors"
-                  aria-label="X / Twitter"
-                >
-                  <X className="w-3.5 h-3.5" />
-                </button>
-                {/* Copy link */}
-                <button
-                  type="button"
-                  className="w-8 h-8 rounded-md border border-border/60 flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground/40 transition-colors"
-                  aria-label="Copiază link"
-                >
-                  <Link2 className="w-3.5 h-3.5" />
-                </button>
-              </div>
+              <ShareButtons url={canonicalUrl} title={post.title} />
             </div>
 
             {/* Hero image */}
