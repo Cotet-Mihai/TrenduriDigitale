@@ -4,16 +4,19 @@ import { useState } from "react";
 import { Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { subscribeEmail } from "@/lib/actions";
 
 export default function NewsletterSection() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) {
-      setSubmitted(true);
-    }
+    setLoading(true);
+    await subscribeEmail(email);
+    setSubmitted(true);
+    setLoading(false);
   };
 
   return (
@@ -57,8 +60,16 @@ export default function NewsletterSection() {
                     className="flex-1 bg-background"
                     required
                   />
-                  <Button type="submit" className="bg-foreground text-background hover:bg-foreground/90 shrink-0 px-5">
-                    Abonează-te
+                  <Button
+                    type="submit"
+                    disabled={loading}
+                    className="bg-foreground text-background hover:bg-foreground/90 shrink-0 px-5"
+                  >
+                    {loading ? (
+                      <span className="w-4 h-4 border-2 border-background/30 border-t-background rounded-full animate-spin" />
+                    ) : (
+                      "Abonează-te"
+                    )}
                   </Button>
                 </form>
               )}

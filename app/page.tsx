@@ -64,16 +64,16 @@ export default async function HomePage() {
             <p className="text-muted-foreground text-base leading-relaxed max-w-lg">
               {displayFeatured.excerpt}
             </p>
-            <div className="flex items-center gap-5">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-5">
               <Link
                 href={`/blog/${displayFeatured.slug}`}
-                className={buttonVariants({ size: "lg" }) + " bg-foreground text-background hover:bg-foreground/90 gap-2 h-11 px-6 rounded-lg"}
+                className={buttonVariants({ size: "lg" }) + " bg-foreground text-background hover:bg-foreground/90 gap-2 h-11 px-6 rounded-lg justify-center"}
               >
                 Citește articolul <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/articole"
-                className={buttonVariants({ variant: "outline", size: "lg" }) + " gap-2 h-11 px-6 rounded-lg"}
+                className={buttonVariants({ variant: "outline", size: "lg" }) + " gap-2 h-11 px-6 rounded-lg justify-center"}
               >
                 Vezi toate articolele <ArrowRight className="w-4 h-4" />
               </Link>
