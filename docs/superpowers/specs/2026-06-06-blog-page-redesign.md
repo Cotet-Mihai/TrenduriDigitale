@@ -41,7 +41,7 @@ NewsletterSection (full-width, below grid)
 - Add `extractHeadings(content: string)` helper — regex matches `## ` lines → `{ id, text }[]`
 - `h2` component in ReactMarkdown receives `id={slugify(text)}` for scroll targets
 - Share row: `Linkedin`, `Facebook`, `Twitter`, `Link2` Lucide icons — visual only, no onClick
-- Sidebar author: avatar + name + hardcoded role "Editor @ DigitalTrendz" + short bio + "Vezi toate articolele" → `/articole`
+- Sidebar author: avatar + name + hardcoded role "Editor @ TrenduriDigitale" + short bio + "Vezi toate articolele" → `/articole`
 - Sidebar related articles: thumbnail 64×64, tiny category badge, 2-line title, read time
 
 ## Data Flow

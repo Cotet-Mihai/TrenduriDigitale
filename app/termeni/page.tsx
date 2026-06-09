@@ -10,7 +10,7 @@ export default function TermeniPage() {
         <div className="space-y-8 text-sm leading-relaxed text-foreground/80">
           <section>
             <h2 className="font-heading text-xl text-foreground mb-3">1. Acceptarea termenilor</h2>
-            <p className="text-muted-foreground">Prin accesarea și utilizarea site-ului digitaltrendz.ro, ești de acord cu acești Termeni și Condiții. Dacă nu ești de acord, te rugăm să nu utilizezi site-ul.</p>
+            <p className="text-muted-foreground">Prin accesarea și utilizarea site-ului trenduridigitale.ro, ești de acord cu acești Termeni și Condiții. Dacă nu ești de acord, te rugăm să nu utilizezi site-ul.</p>
           </section>
 
           <section>
@@ -44,7 +44,7 @@ export default function TermeniPage() {
 
           <section>
             <h2 className="font-heading text-xl text-foreground mb-3">7. Contact</h2>
-            <p className="text-muted-foreground">Întrebări privind acești termeni: <a href="mailto:legal@digitaltrendz.ro" className="text-blue-600 hover:underline">legal@digitaltrendz.ro</a></p>
+            <p className="text-muted-foreground">Întrebări privind acești termeni: <a href="mailto:redactia@trenduriDigitale.ro" className="text-blue-600 hover:underline">redactia@trenduridigitale.ro</a></p>
           </section>
         </div>
       </div>

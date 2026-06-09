@@ -129,7 +129,7 @@ export async function generateMetadata({ params }: PageProps) {
   const post = await getPostBySlug(slug);
   if (!post) return {};
   return {
-    title: `${post.title} – DigitalTrendz`,
+    title: `${post.title} – TrenduriDigitale`,
     description: post.excerpt,
   };
 }
@@ -353,7 +353,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                   </Avatar>
                   <div>
                     <p className="font-semibold text-sm">{post.author.name}</p>
-                    <p className="text-xs text-muted-foreground">Senior Editor @ DigitalTrendz</p>
+                    <p className="text-xs text-muted-foreground">Senior Editor @ TrenduriDigitale</p>
                   </div>
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4">

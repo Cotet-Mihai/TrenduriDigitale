@@ -295,7 +295,7 @@
             - /url: "#"
             - img [ref=e309]
     - generic [ref=e312]:
-      - paragraph [ref=e313]: © 2024 DigitalTrendz. Toate drepturile rezervate.
+      - paragraph [ref=e313]: © 2024 TrenduriDigitale. Toate drepturile rezervate.
       - generic [ref=e314]:
         - link "Politica de confidențialitate" [ref=e315] [cursor=pointer]:
           - /url: /politica-confidentialitate

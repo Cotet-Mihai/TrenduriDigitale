@@ -10,7 +10,7 @@ export default function PoliticaConfidentialitatePage() {
         <div className="space-y-8 text-sm leading-relaxed text-foreground/80">
           <section>
             <h2 className="font-heading text-xl text-foreground mb-3">1. Introducere</h2>
-            <p>TrenduriDigitale ("noi", "ne") operează site-ul digitaltrendz.ro. Această politică explică cum colectăm, utilizăm și protejăm datele tale personale când vizitezi site-ul nostru.</p>
+            <p>TrenduriDigitale ("noi", "ne") operează site-ul trenduridigitale.ro. Această politică explică cum colectăm, utilizăm și protejăm datele tale personale când vizitezi site-ul nostru.</p>
           </section>
 
           <section>
@@ -52,7 +52,7 @@ export default function PoliticaConfidentialitatePage() {
 
           <section>
             <h2 className="font-heading text-xl text-foreground mb-3">6. Contact</h2>
-            <p className="text-muted-foreground">Pentru orice solicitare legată de datele personale, ne poți contacta la: <a href="mailto:privacy@digitaltrendz.ro" className="text-blue-600 hover:underline">privacy@digitaltrendz.ro</a></p>
+            <p className="text-muted-foreground">Pentru orice solicitare legată de datele personale, ne poți contacta la: <a href="mailto:redactia@trenduridigitale.ro" className="text-blue-600 hover:underline">redactia@trenduridigitale.ro</a></p>
           </section>
         </div>
       </div>

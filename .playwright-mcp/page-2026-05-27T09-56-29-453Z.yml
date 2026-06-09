@@ -1,10 +1,10 @@
 - generic [active] [ref=e1]:
   - banner [ref=e2]:
     - generic [ref=e4]:
-      - link "DigitalTrendz" [ref=e5] [cursor=pointer]:
+      - link "TrenduriDigitale" [ref=e5] [cursor=pointer]:
         - /url: /
         - img [ref=e7]
-        - generic [ref=e9]: DigitalTrendz
+        - generic [ref=e9]: TrenduriDigitale
       - navigation [ref=e10]:
         - link "Acasă" [ref=e11] [cursor=pointer]:
           - /url: /
@@ -205,10 +205,10 @@
   - contentinfo [ref=e235]:
     - generic [ref=e237]:
       - generic [ref=e238]:
-        - link "DigitalTrendz" [ref=e239] [cursor=pointer]:
+        - link "TrenduriDigitale" [ref=e239] [cursor=pointer]:
           - /url: /
           - img [ref=e241]
-          - generic [ref=e243]: DigitalTrendz
+          - generic [ref=e243]: TrenduriDigitale
         - paragraph [ref=e244]: Sursa ta de inspirație pentru tot ce e nou în tehnologie, marketing și inovație digitală.
       - generic [ref=e245]:
         - heading "Navigare" [level=4] [ref=e246]
@@ -283,7 +283,7 @@
             - /url: "#"
             - img [ref=e299]
     - generic [ref=e302]:
-      - paragraph [ref=e303]: © 2024 DigitalTrendz. Toate drepturile rezervate.
+      - paragraph [ref=e303]: © 2024 TrenduriDigitale. Toate drepturile rezervate.
       - generic [ref=e304]:
         - link "Politica de confidențialitate" [ref=e305] [cursor=pointer]:
           - /url: /politica-confidentialitate

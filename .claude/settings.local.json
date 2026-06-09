@@ -54,7 +54,7 @@
       "Skill(code-review)",
       "Bash(npx next *)",
       "Bash(Select-String -Pattern \"blog\")",
-      "Bash(xargs sed -i 's/DigitalTrendz/TrenduriDigitale/g')"
+      "Bash(xargs sed -i 's/TrenduriDigitale/TrenduriDigitale/g')"
     ]
   },
   "enableAllProjectMcpServers": true,

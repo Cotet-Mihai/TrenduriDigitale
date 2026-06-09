@@ -959,7 +959,7 @@ export async function generateMetadata({ params }: PageProps) {
   const post = await getPostBySlug(slug);
   if (!post) return {};
   return {
-    title: `${post.title} – DigitalTrendz`,
+    title: `${post.title} – TrenduriDigitale`,
     description: post.excerpt,
   };
 }
@@ -1183,7 +1183,7 @@ import { getCategories, getPosts } from "@/lib/queries";
 import { getCategoryIcon, categoryIconHoverMap } from "@/lib/category-icons";
 
 export const metadata = {
-  title: "Categorii – DigitalTrendz",
+  title: "Categorii – TrenduriDigitale",
   description: "Explorează articolele organizate pe categorii: AI, Marketing Digital, Social Media și multe altele.",
 };
 
@@ -1279,7 +1279,7 @@ export async function generateMetadata({ params }: PageProps) {
   const cat = await getCategoryBySlug(slug);
   if (!cat) return {};
   return {
-    title: `${cat.name} – DigitalTrendz`,
+    title: `${cat.name} – TrenduriDigitale`,
     description: cat.description,
   };
 }
@@ -1368,7 +1368,7 @@ import ArticlesGrid from "@/components/articles-grid";
 import { getPosts, getCategories } from "@/lib/queries";
 
 export const metadata = {
-  title: "Articole – DigitalTrendz",
+  title: "Articole – TrenduriDigitale",
   description: "Toate articolele despre tehnologie, marketing digital, social media și inovație.",
 };
 
@@ -1398,7 +1398,7 @@ import ArticlesGrid from "@/components/articles-grid";
 import { getPopularPosts, getCategories } from "@/lib/queries";
 
 export const metadata = {
-  title: "Cele mai citite – DigitalTrendz",
+  title: "Cele mai citite – TrenduriDigitale",
 };
 
 export default async function ArticolePopularePage() {
@@ -1425,7 +1425,7 @@ import ArticlesGrid from "@/components/articles-grid";
 import { getRecentPosts, getCategories } from "@/lib/queries";
 
 export const metadata = {
-  title: "Articole recente – DigitalTrendz",
+  title: "Articole recente – TrenduriDigitale",
 };
 
 export default async function ArticoleRecentePage() {

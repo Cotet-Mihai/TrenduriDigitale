@@ -1,10 +1,10 @@
 - generic [active] [ref=e1]:
   - banner [ref=e2]:
     - generic [ref=e4]:
-      - link "DigitalTrendz" [ref=e5] [cursor=pointer]:
+      - link "TrenduriDigitale" [ref=e5] [cursor=pointer]:
         - /url: /
         - img [ref=e7]
-        - generic [ref=e9]: DigitalTrendz
+        - generic [ref=e9]: TrenduriDigitale
       - navigation [ref=e10]:
         - link "Acasă" [ref=e11] [cursor=pointer]:
           - /url: /
@@ -38,8 +38,8 @@
             - img [ref=e43]
             - generic [ref=e46]:
               - paragraph [ref=e47]: Email
-              - paragraph [ref=e48]: redactie@digitaltrendz.ro
-              - paragraph [ref=e49]: parteneriate@digitaltrendz.ro
+              - paragraph [ref=e48]: redactia@trenduridigitale.ro
+              - paragraph [ref=e49]: redactia@trenduridigitale.ro
           - generic [ref=e51]:
             - img [ref=e53]
             - generic [ref=e56]:
@@ -80,10 +80,10 @@
   - contentinfo [ref=e88]:
     - generic [ref=e90]:
       - generic [ref=e91]:
-        - link "DigitalTrendz" [ref=e92] [cursor=pointer]:
+        - link "TrenduriDigitale" [ref=e92] [cursor=pointer]:
           - /url: /
           - img [ref=e94]
-          - generic [ref=e96]: DigitalTrendz
+          - generic [ref=e96]: TrenduriDigitale
         - paragraph [ref=e97]: Sursa ta de inspirație pentru tot ce e nou în tehnologie, marketing și inovație digitală.
       - generic [ref=e98]:
         - heading "Navigare" [level=4] [ref=e99]
@@ -158,7 +158,7 @@
             - /url: "#"
             - img [ref=e152]
     - generic [ref=e155]:
-      - paragraph [ref=e156]: © 2024 DigitalTrendz. Toate drepturile rezervate.
+      - paragraph [ref=e156]: © 2024 TrenduriDigitale. Toate drepturile rezervate.
       - generic [ref=e157]:
         - link "Politica de confidențialitate" [ref=e158] [cursor=pointer]:
           - /url: /politica-confidentialitate

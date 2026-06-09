@@ -1,10 +1,10 @@
 - generic [active] [ref=e1]:
   - banner [ref=e2]:
     - generic [ref=e4]:
-      - link "DigitalTrendz" [ref=e5] [cursor=pointer]:
+      - link "TrenduriDigitale" [ref=e5] [cursor=pointer]:
         - /url: /
         - img [ref=e7]
-        - generic [ref=e9]: DigitalTrendz
+        - generic [ref=e9]: TrenduriDigitale
       - navigation [ref=e10]:
         - link "Acasă" [ref=e11] [cursor=pointer]:
           - /url: /
@@ -31,13 +31,13 @@
     - generic [ref=e35]:
       - generic [ref=e36]:
         - img [ref=e38]
-        - generic [ref=e40]: DigitalTrendz
+        - generic [ref=e40]: TrenduriDigitale
       - heading "Sursa ta de inspirație din lumea digitală" [level=1] [ref=e41]
-      - paragraph [ref=e42]: DigitalTrendz este publicația online dedicată profesioniștilor și entuziaștilor din digital — tech, marketing, social media, e-commerce și inovație. Publicăm articole de fond, ghiduri practice și studii de caz care chiar ajută.
+      - paragraph [ref=e42]: TrenduriDigitale este publicația online dedicată profesioniștilor și entuziaștilor din digital — tech, marketing, social media, e-commerce și inovație. Publicăm articole de fond, ghiduri practice și studii de caz care chiar ajută.
     - generic [ref=e44]:
       - generic [ref=e45]:
-        - heading "De ce DigitalTrendz?" [level=2] [ref=e46]
-        - paragraph [ref=e47]: Trăim în era informației, dar nu toată informația este egală. Internetul este plin de conținut superficial, articole reciclate și sfaturi fără substanță. Noi am creat DigitalTrendz pentru că credem că poți face lucruri mai bune cu timpul tău.
+        - heading "De ce TrenduriDigitale?" [level=2] [ref=e46]
+        - paragraph [ref=e47]: Trăim în era informației, dar nu toată informația este egală. Internetul este plin de conținut superficial, articole reciclate și sfaturi fără substanță. Noi am creat TrenduriDigitale pentru că credem că poți face lucruri mai bune cu timpul tău.
         - paragraph [ref=e48]: Echipa noastră de redactori specializați scrie din experiență reală — nu din teorie. Colaborăm cu practicieni, antreprenori și specialiști care au obținut rezultate concrete în industriile despre care scriu.
         - link "Explorează articolele noastre" [ref=e49] [cursor=pointer]:
           - /url: /articole
@@ -127,10 +127,10 @@
   - contentinfo [ref=e155]:
     - generic [ref=e157]:
       - generic [ref=e158]:
-        - link "DigitalTrendz" [ref=e159] [cursor=pointer]:
+        - link "TrenduriDigitale" [ref=e159] [cursor=pointer]:
           - /url: /
           - img [ref=e161]
-          - generic [ref=e163]: DigitalTrendz
+          - generic [ref=e163]: TrenduriDigitale
         - paragraph [ref=e164]: Sursa ta de inspirație pentru tot ce e nou în tehnologie, marketing și inovație digitală.
       - generic [ref=e165]:
         - heading "Navigare" [level=4] [ref=e166]
@@ -205,7 +205,7 @@
             - /url: "#"
             - img [ref=e219]
     - generic [ref=e222]:
-      - paragraph [ref=e223]: © 2024 DigitalTrendz. Toate drepturile rezervate.
+      - paragraph [ref=e223]: © 2024 TrenduriDigitale. Toate drepturile rezervate.
       - generic [ref=e224]:
         - link "Politica de confidențialitate" [ref=e225] [cursor=pointer]:
           - /url: /politica-confidentialitate
