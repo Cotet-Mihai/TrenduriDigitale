@@ -289,7 +289,7 @@ export default function Navbar({ categories }: NavbarProps) {
 
               {/* Subscribe CTA */}
               <div className="px-6 pb-6 pt-2">
-                <Dialog>
+                <Dialog onOpenChange={(open) => { if (open) closeMobile(); }}>
                   <DialogTrigger
                     render={
                       <Button
