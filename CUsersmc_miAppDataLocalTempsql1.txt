@@ -1,0 +1,76 @@
+INSERT INTO posts (slug, title, excerpt, content, category_id, author_id, published_at, read_time, image_url, views, featured)
+VALUES (
+  $art1$pixel9romania$art1$,
+  $art1$Despre Google Pixel 9 (seria), alienarea prin design + ceva marketing$art1$,
+  $excerpt1$Știi vorba aia că mănânci cu ochii? Băi, mie mi se pare că am mai mâncat felul ăsta de mâncare încă de acum câțiva ani buni, când cineva dicta: “smartphone-ul adevărat are fix designul ăsta”. iar de atunci, avem o puzderie de dreptunghiuri cu ramă plată.$excerpt1$,
+  $content1$## Știi vorba aia care zice că “mănânci cu ochii”? Băi, mie mi se pare că am mai mâncat felul ăsta de mâncare încă de acum câțiva ani buni, când cineva dicta: “smartphone-ul adevărat are fix designul ăsta”. Iar de atunci, avem o puzderie de dreptunghiuri cu ramă plată. Nicio inovație în materia asta, dar sunt câteva “goodies” pe parte de AI. Oricum, luați cu sare, că nu tot ce zboară se mănâncă. Să purcedem!
+
+Recunosc din start că am așteptat cu mare interes evenimentul de lansare al Google Pixel 9. Asta nu pentru că sunt un mare fan al Google (vei vedeam că nu sunt un mare fan al nimănui și că sunt prea bătrân și urât ca să mai cad în adorație așa ușor), ci pentru că am folosit de-a lungul timpului mai mult telefoane inteligente de la băieții ăștia, adică Pixel. Și, cu mici excepții, chiar mi-au plăcut. Dar să trecem la ce e cu adevărat important.
+
+Dacă încă nu ți-ai dat seama, ăsta e un text subiectiv. Adică e scris de mine și asta implică (doar) părerea mea, adică nu trebuie să fie și a ta. Și pentru că eu scriu aici, părerea mea contează doar până-n momentul în care părerea ta lovește năsprazic, cu argumente, drept în comentarii 🙂
+
+Deci, vorba poetului popular, se lansă seria Pixel 9. Cu leak-uri masive cu vreo 6 luni înainte de evenimentul din 13 august 2024. Nu e bai, că nu e nici prima dată când se întâmplă așa și cu siguranță nu va fi ultima. Dar e păcat că se întâmplă așa. Zău că mi-e dor de vremurile când companiile aveau și surprize, spectacolul de lansare era cu adevărat unic, iar produsul ăla pe care dădeai cocoașa aia de bani chiar merita inclusiv timpul tău pierdut în fața vreunui monitor CRT (dacă nu știi ce e ală, bagă un search pe Gemini).
+
+Trecem peste. Supriza vreunei lansări de produs azi, mai ales dacă vorbim despre smartphones, este fix zero! Știi cu luni de zile înainte pentru ce îți vinzi rinichiul, iar asta nu e chiar rău (că afli, zic), pentru că dacă tot îți vinzi rinichiul pentru un telefon, măcar să știi cam ce și cum.
+
+Gata cu introducerea și scuze că a fost așa lungă. Sunt cam nescris de ceva vreme așa că am lăsat gândurile să curgă (ah, și câte aș mai fi avut de spus…)
+
+Pixel 9/9Pro/9ProXl/9Pro Fold “are alive and kicking”, de la prețuri care pleacă de la 4.600 de lei pentru varianta de săraci (Pixel 9 – 12 RAM /128GB – Stocare). Până la cât urcă, vă las să vă descurcați, că eu mi-am propus să nu știu să număr până acolo, dar vă zic că versiunea Pixel XL cu stocare de boss merge de minune doar la bugetari. Lansarea în România a adus și marea veste că Google Pixel vine oficial în România, veste care ne-a făcut foarte mândri că suntem pe hartă.
+
+## Ce știu să facă minunile astea ale Google?
+
+Păi, o groază de chestii cu ajutorul software/AI, care suplinește, mai ușor sau mai greu, în funcție de ce ceri de la telefon, hardware-ul moderat. Ce aduce nou Pixelul 9 e legat, aproape ombilical de Ai și procesarea în cloud.
+
+Pe scurt, chiar dacă ești un bou care bagă zilnic la păcănele, tot ai șansa să obții niște răspunsuri valide la întrebări de genul: de ce a rămas Van Gogh fără ureche sau la ce echipă din First League a jucat Edgar Allan Poe.
+
+Poți să folosești Gemini ca să dialoghezi cu ceva algoritm – ca să simți că ești. Apoi,  poți face poze mult mai mișto pentru că Google va altera (poți spune “modifica” dacă te deranjează semantica mea) captura pur fizică pe care sunt capabili senzorii și lentilele să le obțină pentru a-ți oferi o poză aproape de ideal, poți folosi Gemini Live pentru a polemiza cu (din nou) ceva, alegând voce feminină sau masculină, poți face în așa fel încât să apari și tu, cel care ai făcut poza, într-un cadru de grup pe care l-ai fotografiat (vezi pe net singur, că mi-e lene să descriu cum faci poza, miști telefonul ca să capteze scena, apoi lași telefonul altcuiva care să te pozeze pe tine în cadrul ăla – rudimentar, pe bune). Mai poți cere Gemini să îți facă un rezumat al emailurilor primite, al clipurilor video de pe Youtube (nimeni, băi, dar nimeni nu a spus că asta este mare, mare bucurie pentru creatorii de content video., la care nu se va mai uita nimeni, pentru că …rezumat) și în general poți cere cam orice din seria asta de goodies. Cât de bine funcționează chestiile astea? Ei, funcționează, dar…
+
+## Dar!
+
+Google promite 7 ani de update-uri de ROM și tot atâția de actualizări de securitate. Doar primul an de facilități AI marca Google, aka Gemini, este gratuit, pentru restul de 6 (presupunând că o să și folosești telefonul cumpărat acum 7 ani când ieși la pensie) vei plăti un abonament. Habar nu am ce funcții vor rămâne gratuite după acest an și înțeleg că nici măcar granzii Google nu știu (sau nu vor să ne spună – se numește marketing omisiunea asta). Ce este însă foarte clar este că ne adâncim din ce în ce mai mult în mizeria numită software as a service! Asta ca să nu spui mai târziu că nu ai știut cu ce ai de-a face. Bine, anticipez / sper că după ce mastodontul Google (care nu doar că nu e Apple, ori Samsung pe piața de telefoane – și vezi aici cotele de piață – ba chiar nici măcar Xiaomi sau mai ziceți voi ce branduri mai vreți), își va da seama că e greu să-ți vândă această manevră va reveni asupra deciziei și va prelungi cel puțin un an treaba cu plata pentru Gemini. Dar rămâne de văzut. Toamna is coming și odată cu toamna vin și lansările Apple. Bine, ăștia de la Apple sunt, ca de obicei, și mai nesimțiți, de fapt sunt trendsetteri când vine vorba să te convingă să cumperi (în continuare) ceva de la ei. Și apropo de asta, sunt tare curios la cât va pune Google abonamentul pentru opțiunile avansate ale Gemini, din moment ce scurgerile de informații corporate+influencări tech=love (ah cât de murdar sună în română), spun că Apple Intelligence va costa cam 20 de dolari pe lună…).
+
+Ce cumperi tu de fapt acum la precomanda aia pe care ai lansat-o pe Emag sau Vodafone:
+
+- Un foarte mișto și stilat telefon inteligent, care seamănă perfect (cu excepția modulului de camere de pe dorsală, care nu-i pătrat, e oval), cu un iPhone de acum 4 ani – aka iPhone 12 + iterații;
+
+- Un ecran fain de tot, cu o luminozitate excelentă;
+
+- Android 14 curat (da, nu e 15, ăla vine mai târziu, eu intuiesc că va fi lansat cam când va veni și Apple cu noile iphone-uri 16 / iOS 18, total întâmplător, desigur);
+
+- Hardware care zâmbește trufaș din 2021;
+
+- Optimizare software care duce bateria la o durată ceva mai mare decât modelul Pixel 8, dar care pălește grav cu vreo câteva ore în fața iPhone 15 Pro Max sau Galaxy S24 Ultra;
+
+- Brandu’ Google, cu prezență locală, garanție neaoșă la depanări etc., care s-a gândit, în sfârșit, să îmbrace IA românească în mod Inteligent (băi ce joc mișto de cuvinte mi-a reușit aici).
+
+Mi-or fi scăpat ceva detalii din listă, să-mi fie scuzat!
+
+Pe scurt, Google face ce știe mai bine, adică un device pregătit decent pentru Era pe care o vrea AI, pentru că restul de istorie i-a scăpat printre degete, ca multor branduri mari cu picioare de lut din trecut (vezi istoria IBM, de exemplu).
+
+Nu, nu am nimic împotriva AI. Folosesc foarte mult Copilot de la Microsoft, care este mai mult decât decent. Este un tool extrem de capabil și precis (cât va mai fi și ăsta gratuit). Și îl folosesc pe iPhone 13, telefon  vechi de 3 ani, și pe un Galaxy S24 Ultra (cu tot cu Bixbi și ce mai oferă el).
+
+Pe de altă parte, Google Pixel este full de opțiuni AI încă de la generația 8, aia de anul trecut, moment în care același Google nu a simțit niciun fel de nevoie să apeleze la Copycat (da, ideea de “serial smartphone-killer” Apple pare să fi fost un concept ademenitor până și pentru Google) pentru a se desăvârși ca brand de telefoane inteligente, cel puțin ca design. Am folosit Google Pixel 6 și ulterior Pixel 6 Pro, ultimul chiar recent, iar ca identitate de brand m-am simțit ca făcând parte din universul Google (dincolo de problemele cunoscute deja – prăjeam ouă pe Pixel 6 Pro, iar pentru Pixel 6 aveam nevoie permanent de un încărcător la îndemână). Dar era Pixel, nu o copie de ceva! De când a devenit până și gigantul Google un plagiator ordinar (a se citi obișnuit) în materie de design? Iar întrebarea cea mai importantă nu este de când, ci de ce? De ce, din moment ce avea deja creată propria identitate? Răspunsul poate să fie totuși extrem de simplu: pentru că e mult mai ușor așa.
+
+Doar că, pentru mine cel puțin, asta a dus la o decizie de achiziție diferită decât aș fi vrut. Pe scurt, fiind posesor de iPhone 13 de 3 ani și intenționând să schimb macazul (fără vreun motiv temeinic în afară de devalorizarea telefonului meu (cam ăsta este intervalul ideal la care poți vinde un iPhone și încă să mai primești un preț decent pe device raporta la prețul plătit inițial), mă gândeam serios la un Pixel 9. Drept urmare, am așteptat lansarea, confirmarea informațiilor scăpate pe net, urmând să iau decizia de a cumpăra sau nu noul smartphone de la Google.
+
+Cu părere de rău, am mers pe mâna Apple. Dar nu în ceea ce privește device-ul în sine, ci pe ideea de produs deja verificat, ori, dacă vreți, pe tehnologie deja confirmată ca fiabilă. Așa că am ales Samsung Galaxy S24 Ultra (versiunea de săraci – 256GB stocare).
+
+Nu sunt brand addict, așa cum nu cred că sunt imbecilizat de tehnologie, deși iubesc tehnologia. Și, cel mai important, nu sunt alienat de tehnologie, caut să o înțeleg, ceea ce vă recomand și vouă. Scriu despre tehnologie atunci când am răgaz. Dar nu am timp de experimente, nu am bani de experimente, așa că nu înghit marketingul exaltat. Am doar nevoie de un produs pe care să mă pot baza câțiva ani de acum încolo și pe care nu intenționez să îl tratez ca pe o persoană, ori instrument de statut social,  ci ca pe ceea ce este, adică un instrument identic unei mașini, unei bormașini etc.
+
+În loc de concluzie la textul ăsta… nu știu dacă AI-ul va sălta vânzările Google (știu că asta nu contează, din moment ce tu, Google, deții Android), aici vorbesc de posibilitatea ca Google să devină, inclusiv ca brand de smartphones, acea entitate la care toți ceilalți producători (vezi aici Samsung și Xiaomi, și X și Y) să se uite ca la tatăl lor, ceea ce și este, aparent, Google. Momentan, însă, Samsung livrează procesoare (versiuni dedicate, ce-i drept) pentru Google Pixel 9 – aka rău famatul Exynos pe care se bazează Tensor G4. Mai mult, înțeleg că pentru seria Pixel 10 Google a bătut deja palma cu Qualcomm, iar la anul seria 10 de Pixel va fi dotată cu astfel de procesoare, care nu sunt doar capabile, ci sunt și eficiente. Dar și aici putem împărți firul în patru bazându-ne pe alegerile americanilor din ultimii 3 ani: va folosi Google pentru Pixel 10 Snapdragon 8 gen 4 sau va apela la soluții de compromis din seria produsă de Qualcomm?
+
+Dracu știe, doar că dacă tot îmi ceri bani pe un flagship, livrează-mi unul, nu un simulacru care să mimeze unul, chiar dacă suntem în era AI. Apropo de asta și închei aici: Pixel 9 (seria) nu filmează 8K (nu are puterea necesară de procesare), dar face upscale la rezoluția asta. În cloud… adică încărcând clipul filmat de tine în serverele Google, apoi procesându-l, apoi ….ah, la dracu, e ca și cum te scarpini invers. Nu am testat, au făcut-o alții. Nu știu dacă interesează 8K pe cineva, dar, același dar, de ce să faci asta? Xiaomi, de exemplu, oferă opțiunea (bună sau rea) încă de la seria Mi 10, lansată în februarie 2020. Să fie oare vorba despre crearea acestei dependențe de servicii plătite și separate de device-ul pe care dai oricum o cârcă de bani? Băi, înjurați-mă dacă simțiți nevoia, dar da, despre asta este vorba.
+
+Măi, Google, măi, te critic așa pentru că te iubesc, mai ales că ai venit în sfârșit la noi. Dar nu te pot iubi decât la fel cum îl iubesc și pe măcelarul care îmi dă cea mai bună carne de porc la piață la Sălăjan, nu ca ăla din piața Miniș care încearcă să mă fure la cântar, ca pe frizerița mea care tunde din foarfecă, nu ca băiatul ăla de la barber shop, care rade cu mașina de tuns…
+
+PS: e important – cele mai noi și mai mișto funcții AI Gemini NU sunt disponibile pe piața din locală decât în format text, iar unele nu sunt disponibile deloc (limba Română în format voce este în lucru și va fi disponibilă la o dată… ulterioară). Se întâmplă asta probabil pentru că (și acum citez aproximativ din declarația oficialului Google care a și prezentat seria Pixel în conferința de presă de lansare), “Google a analizat foarte mult momentul venirii noastre în România”.
+
+Aveți și voi sentimentul țării din lumea a treia vizitată de extratereștri sau îl am doar eu. Sau este doar Google?$content1$,
+  '10000000-0000-0000-0000-000000000001',
+  '00000000-0000-0000-0000-000000000001',
+  '2024-08-15T12:00:00+00:00',
+  8,
+  $art1$https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=1200&q=80$art1$,
+  0,
+  false
+);

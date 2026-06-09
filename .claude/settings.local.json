@@ -40,7 +40,21 @@
       "Bash(pnpm tsc *)",
       "Bash(git commit *)",
       "Bash(Select-String \"blog\")",
-      "Bash(git rm *)"
+      "Bash(git rm *)",
+      "WebFetch(domain:trenduridigitale.wordpress.com)",
+      "WebFetch(domain:public-api.wordpress.com)",
+      "Bash(curl -s \"https://public-api.wordpress.com/rest/v1.1/sites/trenduridigitale.wordpress.com/posts/slug:pixel9romania\")",
+      "Bash(curl -s \"https://public-api.wordpress.com/rest/v1.1/sites/trenduridigitale.wordpress.com/posts/slug:spovedania-tehnologica-a-lu-eftimie-ce-gadgeturi-ii-sunt-pe-plac-de-ce-le-a-ales-el\")",
+      "Bash(git stash *)",
+      "Bash(git branch *)",
+      "Bash(Remove-Item -Force articles.sql, convert_articles.py, generate_sql.py, insert_1.sql, insert_2.sql, insert_3.sql)",
+      "Bash(node *)",
+      "Bash(pnpm lint *)",
+      "Bash(pnpm eslint *)",
+      "Skill(code-review)",
+      "Bash(npx next *)",
+      "Bash(Select-String -Pattern \"blog\")",
+      "Bash(xargs sed -i 's/DigitalTrendz/TrenduriDigitale/g')"
     ]
   },
   "enableAllProjectMcpServers": true,
