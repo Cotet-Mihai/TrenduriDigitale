@@ -317,17 +317,42 @@ export default function Navbar({ categories }: NavbarProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex h-20 items-center justify-between">
 
-            {/* Logo */}
-            <Link href="/" className="flex items-center h-20 overflow-hidden">
-              <Image
-                src="/logo-text.png"
-                alt="TrenduriDigitale"
-                width={500}
-                height={125}
-                style={{ filter: "invert(1)", height: "120px", width: "auto" }}
-                priority
-              />
-            </Link>
+            {/* Left: hamburger on mobile, logo on desktop */}
+            <div className="flex items-center">
+              {/* Hamburger — mobile only */}
+              <button
+                className="md:hidden relative flex items-center justify-center w-9 h-9 rounded-md hover:bg-accent transition-colors"
+                onClick={() => setMobileOpen(!mobileOpen)}
+                aria-label={mobileOpen ? "Închide meniu" : "Deschide meniu"}
+              >
+                <Menu
+                  className={`absolute w-5 h-5 transition-all duration-200 ${
+                    mobileOpen
+                      ? "rotate-90 opacity-0 scale-75"
+                      : "rotate-0 opacity-100 scale-100"
+                  }`}
+                />
+                <X
+                  className={`absolute w-5 h-5 transition-all duration-200 ${
+                    mobileOpen
+                      ? "rotate-0 opacity-100 scale-100"
+                      : "-rotate-90 opacity-0 scale-75"
+                  }`}
+                />
+              </button>
+
+              {/* Logo — desktop only */}
+              <Link href="/" className="hidden md:flex items-center h-20 overflow-hidden">
+                <Image
+                  src="/logo-text.png"
+                  alt="TrenduriDigitale"
+                  width={500}
+                  height={125}
+                  style={{ filter: "invert(1)", height: "120px", width: "auto" }}
+                  priority
+                />
+              </Link>
+            </div>
 
             {/* Desktop nav — unchanged */}
             <div className="hidden md:flex">
@@ -386,9 +411,22 @@ export default function Navbar({ categories }: NavbarProps) {
               </NavigationMenu>
             </div>
 
-            {/* Right actions */}
+            {/* Right: logo on mobile, actions on desktop */}
             <div className="flex items-center gap-3">
-<Dialog>
+              {/* Logo — mobile only */}
+              <Link href="/" className="md:hidden flex items-center h-20 overflow-hidden">
+                <Image
+                  src="/logo-text.png"
+                  alt="TrenduriDigitale"
+                  width={500}
+                  height={125}
+                  style={{ filter: "invert(1)", height: "120px", width: "auto" }}
+                  priority
+                />
+              </Link>
+
+              {/* Desktop actions */}
+              <Dialog>
                 <DialogTrigger
                   render={
                     <Button className="hidden md:flex bg-foreground text-background hover:bg-foreground/90 text-sm gap-1.5 h-9 px-4" />
@@ -398,28 +436,6 @@ export default function Navbar({ categories }: NavbarProps) {
                 </DialogTrigger>
                 <SubscribeModal />
               </Dialog>
-
-              {/* Animated hamburger */}
-              <button
-                className="md:hidden relative flex items-center justify-center w-9 h-9 rounded-md hover:bg-accent transition-colors"
-                onClick={() => setMobileOpen(!mobileOpen)}
-                aria-label={mobileOpen ? "Închide meniu" : "Deschide meniu"}
-              >
-                <Menu
-                  className={`absolute w-5 h-5 transition-all duration-200 ${
-                    mobileOpen
-                      ? "rotate-90 opacity-0 scale-75"
-                      : "rotate-0 opacity-100 scale-100"
-                  }`}
-                />
-                <X
-                  className={`absolute w-5 h-5 transition-all duration-200 ${
-                    mobileOpen
-                      ? "rotate-0 opacity-100 scale-100"
-                      : "-rotate-90 opacity-0 scale-75"
-                  }`}
-                />
-              </button>
             </div>
           </div>
         </div>
