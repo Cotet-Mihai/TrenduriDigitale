@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import AnalyticsWrapper from "@/components/analytics-wrapper";
 import CookieBanner from "@/components/cookie-banner";
+import ScrollToTop from "@/components/scroll-to-top";
 import { getCategories } from "@/lib/queries";
 
 const inter = Inter({
@@ -96,6 +97,7 @@ export default async function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col">
+        <ScrollToTop />
         <Navbar categories={categories} />
         {children}
         <Footer />

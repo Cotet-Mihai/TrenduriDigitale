@@ -161,7 +161,7 @@ export default function Navbar({ categories }: NavbarProps) {
               opacity: mobileOpen ? 1 : 0,
               pointerEvents: mobileOpen ? "auto" : "none",
             }}
-            onClick={navigateAndClose}
+            onClick={closeMobile}
           />
 
           {/* Clip container — fixed below header, hides panel when translated up */}
@@ -184,7 +184,7 @@ export default function Navbar({ categories }: NavbarProps) {
 
                 <Link
                   href="/"
-                  onClick={navigateAndClose}
+                  scroll={false} onClick={navigateAndClose}
                   className="w-full text-center py-3.5 rounded-xl text-base font-medium transition-colors hover:bg-gray-100"
                   style={{ color: "#111" }}
                 >
@@ -216,7 +216,7 @@ export default function Navbar({ categories }: NavbarProps) {
                         <Link
                           key={item.href}
                           href={item.href}
-                          onClick={navigateAndClose}
+                          scroll={false} onClick={navigateAndClose}
                           className="w-full text-center py-2.5 rounded-lg text-sm transition-colors hover:bg-gray-100"
                           style={{ color: "#6b7280" }}
                         >
@@ -250,7 +250,7 @@ export default function Navbar({ categories }: NavbarProps) {
                     <div className="flex flex-col items-center gap-0.5 py-1">
                       <Link
                         href="/categorii"
-                        onClick={navigateAndClose}
+                        scroll={false} onClick={navigateAndClose}
                         className="w-full text-center py-2.5 rounded-lg text-sm font-medium transition-colors hover:bg-gray-100"
                         style={{ color: "#6b7280" }}
                       >
@@ -260,7 +260,7 @@ export default function Navbar({ categories }: NavbarProps) {
                         <Link
                           key={cat.slug}
                           href={`/categorii/${cat.slug}`}
-                          onClick={navigateAndClose}
+                          scroll={false} onClick={navigateAndClose}
                           className="w-full text-center py-2.5 rounded-lg text-sm transition-colors hover:bg-gray-100"
                           style={{ color: "#6b7280" }}
                         >
@@ -275,7 +275,7 @@ export default function Navbar({ categories }: NavbarProps) {
 
                 <Link
                   href="/despre"
-                  onClick={navigateAndClose}
+                  scroll={false} onClick={navigateAndClose}
                   className="w-full text-center py-3.5 rounded-xl text-base font-medium transition-colors hover:bg-gray-100"
                   style={{ color: "#111" }}
                 >
@@ -284,7 +284,7 @@ export default function Navbar({ categories }: NavbarProps) {
 
                 <Link
                   href="/contact"
-                  onClick={navigateAndClose}
+                  scroll={false} onClick={navigateAndClose}
                   className="w-full text-center py-3.5 rounded-xl text-base font-medium transition-colors hover:bg-gray-100"
                   style={{ color: "#111" }}
                 >
@@ -351,7 +351,7 @@ export default function Navbar({ categories }: NavbarProps) {
               </button>
 
               {/* Logo — desktop only */}
-              <Link href="/" className="hidden md:flex items-center h-20 overflow-hidden">
+              <Link href="/" scroll={false} className="hidden md:flex items-center h-20 overflow-hidden">
                 <Image
                   src="/logo-text.png"
                   alt="TrenduriDigitale"
@@ -368,7 +368,7 @@ export default function Navbar({ categories }: NavbarProps) {
               <NavigationMenu>
                 <NavigationMenuList>
                   <NavigationMenuItem>
-                    <Link href="/" className={navigationMenuTriggerStyle()}>
+                    <Link href="/" scroll={false} className={navigationMenuTriggerStyle()}>
                       Acasă
                     </Link>
                   </NavigationMenuItem>
@@ -406,13 +406,13 @@ export default function Navbar({ categories }: NavbarProps) {
                   </NavigationMenuItem>
 
                   <NavigationMenuItem>
-                    <Link href="/despre" className={navigationMenuTriggerStyle()}>
+                    <Link href="/despre" scroll={false} className={navigationMenuTriggerStyle()}>
                       Despre
                     </Link>
                   </NavigationMenuItem>
 
                   <NavigationMenuItem>
-                    <Link href="/contact" className={navigationMenuTriggerStyle()}>
+                    <Link href="/contact" scroll={false} className={navigationMenuTriggerStyle()}>
                       Contact
                     </Link>
                   </NavigationMenuItem>
@@ -423,7 +423,7 @@ export default function Navbar({ categories }: NavbarProps) {
             {/* Right: logo on mobile, actions on desktop */}
             <div className="flex items-center gap-3">
               {/* Logo — mobile only */}
-              <Link href="/" className="md:hidden flex items-center h-20 overflow-hidden" onClick={navigateAndClose}>
+              <Link href="/" className="md:hidden flex items-center h-20 overflow-hidden" scroll={false} onClick={navigateAndClose}>
                 <Image
                   src="/logo-text.png"
                   alt="TrenduriDigitale"
