@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { getCategories } from "@/lib/queries";
+import CookieSettingsButton from "@/components/cookie-settings-button";
 
 const navLinks = [
   { label: "Acasă", href: "/" },
@@ -91,15 +92,16 @@ export default async function Footer() {
       <div className="border-t border-background/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-2">
           <p className="text-xs text-background/50">
-            © 2024 TrenduriDigitale. Toate drepturile rezervate.
+            © 2024–{new Date().getFullYear()} TrenduriDigitale. Toate drepturile rezervate.
           </p>
-          <div className="flex gap-4">
+          <div className="flex flex-wrap justify-center gap-x-4 gap-y-1">
             <Link href="/politica-confidentialitate" className="text-xs text-background/50 hover:text-background/80 transition-colors">
               Politica de confidențialitate
             </Link>
             <Link href="/termeni" className="text-xs text-background/50 hover:text-background/80 transition-colors">
               Termeni și condiții
             </Link>
+            <CookieSettingsButton className="text-xs text-background/50 hover:text-background/80 transition-colors cursor-pointer" />
           </div>
         </div>
       </div>

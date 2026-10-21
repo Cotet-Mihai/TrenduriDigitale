@@ -127,3 +127,23 @@ export async function deletePost(id: string): Promise<{ error?: string }> {
   invalidatePublicSite([data.slug]);
   return {};
 }
+
+// ─── Contact messages ──────────────────────────────────────────────────────
+
+export async function setMessageRead(id: string, read: boolean): Promise<{ error?: string }> {
+  if (!(await getAdminUser())) return { error: "Sesiunea a expirat. Autentifică-te din nou." };
+  const supabase = await createSupabaseServerClient();
+  const { error } = await supabase.from("contact_messages").update({ read }).eq("id", id);
+  if (error) return { error: error.message };
+  revalidatePath("/admin", "layout");
+  return {};
+}
+
+export async function deleteMessage(id: string): Promise<{ error?: string }> {
+  if (!(await getAdminUser())) return { error: "Sesiunea a expirat. Autentifică-te din nou." };
+  const supabase = await createSupabaseServerClient();
+  const { error } = await supabase.from("contact_messages").delete().eq("id", id);
+  if (error) return { error: error.message };
+  revalidatePath("/admin", "layout");
+  return {};
+}

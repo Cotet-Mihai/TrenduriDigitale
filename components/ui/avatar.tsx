@@ -25,7 +25,15 @@ function Avatar({
   )
 }
 
-function AvatarImage({ className, ...props }: AvatarPrimitive.Image.Props) {
+// Avatars render at ≤48px; route local images through the Next.js optimizer (96px for 2x screens)
+// instead of downloading the original file (the author photo is ~500 KB).
+function optimizedSrc(src: AvatarPrimitive.Image.Props["src"]) {
+  return typeof src === "string" && src.startsWith("/") && !src.startsWith("/_next/")
+    ? `/_next/image?url=${encodeURIComponent(src)}&w=96&q=75`
+    : src
+}
+
+function AvatarImage({ className, src, ...props }: AvatarPrimitive.Image.Props) {
   return (
     <AvatarPrimitive.Image
       data-slot="avatar-image"
@@ -33,6 +41,7 @@ function AvatarImage({ className, ...props }: AvatarPrimitive.Image.Props) {
         "aspect-square size-full rounded-full object-cover",
         className
       )}
+      src={optimizedSrc(src)}
       {...props}
     />
   )

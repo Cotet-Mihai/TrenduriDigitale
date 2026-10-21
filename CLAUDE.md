@@ -34,6 +34,12 @@ No test suite is configured.
 - Navbar/footer are hidden on `/admin` by `components/site-chrome.tsx` (except `/admin/previzualizare`, the private live preview fed from the editor via localStorage — `lib/preview.ts`).
 - SEO checks shown in the editor live in `lib/seo.ts` (pure function, thresholds at the top). `posts.focus_keyword` is admin-only; `posts.tags` is rendered under articles and in OG/JSON-LD.
 
+### Privacy / legal
+
+- Operator: Radu Eftimie (natural person). `app/politica-confidentialitate/page.tsx` must match what the code does — update it when adding any tracker, form, or data processor.
+- Analytics (`components/analytics-wrapper.tsx`) loads only after "Accept" in `components/cookie-banner.tsx`; "Setări cookie" in the footer reopens the banner; `/admin` is excluded via `beforeSend`.
+- Contact form → `sendContactMessage` (`lib/actions.ts`) → `contact_messages` (anon insert-only RLS) → `/admin/mesaje`. A pg_cron job deletes messages older than 12 months (promised in the privacy policy).
+
 ### SEO / AEO output
 
 - Article pages emit `Article` + `BreadcrumbList` JSON-LD; the author points to the `Person` on `/despre#autor`. Use ISO `publishedAt`/`updatedAt` for machine-readable dates — `date` is a Romanian display string and `new Date()` cannot parse most month names.

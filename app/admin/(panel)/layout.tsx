@@ -3,12 +3,14 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { ExternalLink, LogOut } from "lucide-react";
 import { getAdminUser } from "@/lib/supabase-server";
+import { getUnreadMessageCount } from "@/lib/admin-queries";
 import { logout } from "@/lib/admin-actions";
 import { Button, buttonVariants } from "@/components/ui/button";
 
 export default async function AdminPanelLayout({ children }: { children: React.ReactNode }) {
   const user = await getAdminUser();
   if (!user) redirect("/admin/login");
+  const unread = await getUnreadMessageCount();
 
   return (
     <>
@@ -30,8 +32,21 @@ export default async function AdminPanelLayout({ children }: { children: React.R
               Admin
             </span>
           </Link>
+          <nav className="flex items-center gap-1 mr-auto ml-2 sm:ml-6">
+            <Link href="/admin" className={buttonVariants({ variant: "ghost", size: "sm" })}>
+              Articole
+            </Link>
+            <Link href="/admin/mesaje" className={buttonVariants({ variant: "ghost", size: "sm" })}>
+              Mesaje
+              {unread > 0 && (
+                <span className="ml-0.5 min-w-5 h-5 px-1.5 rounded-full bg-blue-600 text-white text-[11px] font-semibold inline-flex items-center justify-center">
+                  {unread}
+                </span>
+              )}
+            </Link>
+          </nav>
           <div className="flex items-center gap-1 sm:gap-2">
-            <span className="hidden md:block text-sm text-muted-foreground mr-2 truncate max-w-[220px]">
+            <span className="hidden lg:block text-sm text-muted-foreground mr-2 truncate max-w-[220px]">
               {user.email}
             </span>
             <Link href="/" target="_blank" className={buttonVariants({ variant: "ghost", size: "sm" })}>

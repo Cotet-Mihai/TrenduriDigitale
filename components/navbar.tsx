@@ -38,19 +38,26 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { subscribeEmail } from "@/lib/actions";
+import NewsletterConsentNote, { newsletterErrorMessage } from "@/components/newsletter-consent-note";
 import type { Category } from "@/lib/types";
 
 function SubscribeModal() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    await subscribeEmail(email);
-    setSubmitted(true);
+    setError(null);
+    const result = await subscribeEmail(email);
     setLoading(false);
+    if (result.error) {
+      setError(newsletterErrorMessage(result.error));
+      return;
+    }
+    setSubmitted(true);
   };
 
   return (
@@ -62,7 +69,7 @@ function SubscribeModal() {
           </div>
           <h2 className="font-heading text-2xl mb-2">Te-ai abonat!</h2>
           <p className="text-sm text-muted-foreground">
-            Verifică-ți inboxul pentru a confirma abonarea. Bine ai venit în comunitate!
+            Vei primi următoarele articole pe email. Bine ai venit în comunitate!
           </p>
         </div>
       ) : (
@@ -91,9 +98,8 @@ function SubscribeModal() {
                 required
               />
             </div>
-            <p className="text-xs text-muted-foreground">
-              Nu trimitem spam. Te poți dezabona oricând cu un singur click.
-            </p>
+            {error && <p role="alert" className="text-sm text-destructive">{error}</p>}
+            <NewsletterConsentNote />
             <Button
               type="submit"
               disabled={loading}

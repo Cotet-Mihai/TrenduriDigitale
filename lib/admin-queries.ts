@@ -71,3 +71,40 @@ export async function getEditorOptions() {
     })),
   };
 }
+
+export interface ContactMessage {
+  id: string;
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+  read: boolean;
+  createdAt: string;
+}
+
+export async function getContactMessages(): Promise<ContactMessage[]> {
+  const supabase = await createSupabaseServerClient();
+  const { data, error } = await supabase
+    .from("contact_messages")
+    .select("id, name, email, subject, message, read, created_at")
+    .order("created_at", { ascending: false });
+  if (error) throw error;
+  return (data ?? []).map((m) => ({
+    id: m.id,
+    name: m.name,
+    email: m.email,
+    subject: m.subject ?? "",
+    message: m.message,
+    read: m.read,
+    createdAt: m.created_at,
+  }));
+}
+
+export async function getUnreadMessageCount(): Promise<number> {
+  const supabase = await createSupabaseServerClient();
+  const { count } = await supabase
+    .from("contact_messages")
+    .select("id", { count: "exact", head: true })
+    .eq("read", false);
+  return count ?? 0;
+}

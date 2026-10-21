@@ -5,18 +5,25 @@ import { Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { subscribeEmail } from "@/lib/actions";
+import NewsletterConsentNote, { newsletterErrorMessage } from "@/components/newsletter-consent-note";
 
 export default function NewsletterSection() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    await subscribeEmail(email);
-    setSubmitted(true);
+    setError(null);
+    const result = await subscribeEmail(email);
     setLoading(false);
+    if (result.error) {
+      setError(newsletterErrorMessage(result.error));
+      return;
+    }
+    setSubmitted(true);
   };
 
   return (
@@ -47,7 +54,7 @@ export default function NewsletterSection() {
                     ✓ Te-ai abonat cu succes!
                   </p>
                   <p className="text-sm text-muted-foreground mt-1">
-                    Verifică-ți inboxul pentru confirmare.
+                    Vei primi următoarele articole pe email.
                   </p>
                 </div>
               ) : (
@@ -73,6 +80,8 @@ export default function NewsletterSection() {
                   </Button>
                 </form>
               )}
+              {!submitted && error && <p role="alert" className="text-sm text-destructive mt-2">{error}</p>}
+              {!submitted && <NewsletterConsentNote className="mt-2" />}
             </div>
           </div>
         </div>
