@@ -5,8 +5,8 @@ import { cn } from "@/lib/utils";
 export default function NewsletterConsentNote({ className }: { className?: string }) {
   return (
     <p className={cn("text-xs text-muted-foreground leading-relaxed", className)}>
-      Folosim adresa doar ca să-ți trimitem newsletterul. Te poți dezabona oricând, scriind la
-      redactia@trenduridigitale.ro.{" "}
+      Folosim adresa doar ca să-ți trimitem articolele noi. Te poți dezabona oricând, din linkul aflat în fiecare
+      email.{" "}
       <Link href="/politica-confidentialitate#newsletter" className="underline underline-offset-2 hover:text-foreground">
         Detalii
       </Link>

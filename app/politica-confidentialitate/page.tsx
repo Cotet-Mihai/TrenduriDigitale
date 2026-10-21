@@ -62,16 +62,17 @@ export default function PoliticaConfidentialitatePage() {
             <Facts
               rows={[
                 ["Ce date", "Adresa de email și data abonării."],
-                ["De ce", "Ca să-ți trimitem articolele noi pe email."],
+                ["De ce", "Ca să-ți trimitem pe email fiecare articol nou, în momentul publicării."],
                 ["Temei legal", "Consimțământul tău (art. 6 alin. 1 lit. a GDPR), dat când apeși „Abonează-te”."],
-                ["Cât timp", "Până te dezabonezi. După dezabonare, adresa se șterge în cel mult 5 zile lucrătoare."],
+                ["Cât timp", "Până te dezabonezi. La dezabonare, adresa se șterge imediat."],
                 [
                   "Dezabonare",
                   <>
-                    Oricând, scriind la <Mail /> cu subiectul „Dezabonare newsletter”. Fiecare email trimis va avea și
-                    instrucțiunile de dezabonare. Retragerea consimțământului nu afectează trimiterile făcute înainte.
+                    Oricând, cu un click pe linkul „Dezabonează-te” din fiecare email, sau scriind la <Mail />.
+                    Retragerea consimțământului nu afectează trimiterile făcute înainte.
                   </>,
                 ],
+                ["Trimitere", "Emailurile pleacă prin Resend (vezi secțiunea 6)."],
               ]}
             />
           </Section>
@@ -125,14 +126,18 @@ export default function PoliticaConfidentialitatePage() {
           </Section>
 
           <Section title="6. Cine mai are acces la date">
-            <p>Datele sunt prelucrate, în numele nostru și doar pentru scopurile de mai sus, de doi furnizori:</p>
+            <p>Datele sunt prelucrate, în numele nostru și doar pentru scopurile de mai sus, de următorii furnizori:</p>
             <ul className="list-disc list-inside space-y-1">
               <li>
                 <strong className="text-foreground">Vercel Inc.</strong> (SUA) — găzduirea site-ului și statistica vizitelor;
               </li>
               <li>
                 <strong className="text-foreground">Supabase Inc.</strong> (SUA) — baza de date în care se păstrează
-                adresele de la newsletter și mesajele de contact.
+                adresele de la newsletter și mesajele de contact;
+              </li>
+              <li>
+                <strong className="text-foreground">Resend Inc.</strong> (SUA) — trimiterea emailurilor de newsletter
+                (primește adresa ta și conținutul emailului).
               </li>
             </ul>
             <p>

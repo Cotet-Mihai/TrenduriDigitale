@@ -39,6 +39,7 @@ No test suite is configured.
 - Operator: Radu Eftimie (natural person). `app/politica-confidentialitate/page.tsx` must match what the code does — update it when adding any tracker, form, or data processor.
 - Analytics (`components/analytics-wrapper.tsx`) loads only after "Accept" in `components/cookie-banner.tsx`; "Setări cookie" in the footer reopens the banner; `/admin` is excluded via `beforeSend`.
 - Contact form → `sendContactMessage` (`lib/actions.ts`) → `contact_messages` (anon insert-only RLS) → `/admin/mesaje`. A pg_cron job deletes messages older than 12 months (promised in the privacy policy).
+- Newsletter: `savePost` emails subscribers via `after()` → `lib/newsletter.ts` (Resend HTTP API) only on the first draft→published transition; `posts.newsletter_sent_at` is claimed atomically so nothing is sent twice. Without `RESEND_API_KEY` (optional `NEWSLETTER_FROM`) sending is skipped. Unsubscribe: `/dezabonare?token=` (click to confirm) and RFC 8058 one-click `POST /api/newsletter/unsubscribe`, both via the `unsubscribe_newsletter()` SECURITY DEFINER function.
 
 ### SEO / AEO output
 

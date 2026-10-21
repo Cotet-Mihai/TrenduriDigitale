@@ -21,6 +21,14 @@ export async function subscribeEmail(email: string): Promise<{ error?: string }>
   return {};
 }
 
+const UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+
+export async function unsubscribeNewsletter(token: string): Promise<{ ok: boolean }> {
+  if (!UUID_PATTERN.test(token)) return { ok: false };
+  const { data, error } = await supabase.rpc("unsubscribe_newsletter", { p_token: token });
+  return { ok: !error && data === true };
+}
+
 export interface ContactInput {
   name: string;
   email: string;

@@ -44,6 +44,9 @@ export default async function AdminPanelLayout({ children }: { children: React.R
                 </span>
               )}
             </Link>
+            <Link href="/admin/newsletter" className={buttonVariants({ variant: "ghost", size: "sm" })}>
+              Newsletter
+            </Link>
           </nav>
           <div className="flex items-center gap-1 sm:gap-2">
             <span className="hidden lg:block text-sm text-muted-foreground mr-2 truncate max-w-[220px]">

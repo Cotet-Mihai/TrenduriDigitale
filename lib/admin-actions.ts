@@ -2,6 +2,8 @@
 
 import { revalidatePath, updateTag } from "next/cache";
 import { redirect } from "next/navigation";
+import { after } from "next/server";
+import { sendArticleNewsletter } from "@/lib/newsletter";
 import { createSupabaseServerClient, getAdminUser } from "@/lib/supabase-server";
 import { isAllowedCoverImage, SLUG_PATTERN, type PostInput } from "@/lib/admin";
 
@@ -84,9 +86,11 @@ export async function savePost(
   const supabase = await createSupabaseServerClient();
 
   let previousSlug: string | null = null;
+  let wasPublished = false;
   if (input.id) {
-    const { data } = await supabase.from("posts").select("slug").eq("id", input.id).maybeSingle();
+    const { data } = await supabase.from("posts").select("slug, published_at").eq("id", input.id).maybeSingle();
     previousSlug = data?.slug ?? null;
+    wasPublished = Boolean(data?.published_at);
   }
 
   const row = {
@@ -114,6 +118,13 @@ export async function savePost(
   }
 
   invalidatePublicSite([slug, ...(previousSlug && previousSlug !== slug ? [previousSlug] : [])]);
+
+  // Email subscribers only on the first draft→published transition, after the response is sent.
+  const postId = data.id;
+  if (publishing && !wasPublished) {
+    after(() => sendArticleNewsletter(supabase, postId));
+  }
+
   return { id: data.id, slug: data.slug };
 }
 
@@ -145,5 +156,16 @@ export async function deleteMessage(id: string): Promise<{ error?: string }> {
   const { error } = await supabase.from("contact_messages").delete().eq("id", id);
   if (error) return { error: error.message };
   revalidatePath("/admin", "layout");
+  return {};
+}
+
+// ─── Newsletter ────────────────────────────────────────────────────────────
+
+export async function deleteSubscriber(id: string): Promise<{ error?: string }> {
+  if (!(await getAdminUser())) return { error: "Sesiunea a expirat. Autentifică-te din nou." };
+  const supabase = await createSupabaseServerClient();
+  const { error } = await supabase.from("newsletter_subscribers").delete().eq("id", id);
+  if (error) return { error: error.message };
+  revalidatePath("/admin/newsletter");
   return {};
 }

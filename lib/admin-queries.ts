@@ -108,3 +108,26 @@ export async function getUnreadMessageCount(): Promise<number> {
     .eq("read", false);
   return count ?? 0;
 }
+
+export interface Subscriber {
+  id: string;
+  email: string;
+  subscribedAt: string;
+}
+
+export async function getNewsletterOverview(): Promise<{
+  subscribers: Subscriber[];
+  sent: { title: string; slug: string; sentAt: string }[];
+}> {
+  const supabase = await createSupabaseServerClient();
+  const [{ data: subs, error: subErr }, { data: posts, error: postErr }] = await Promise.all([
+    supabase.from("newsletter_subscribers").select("id, email, subscribed_at").eq("active", true).order("subscribed_at", { ascending: false }),
+    supabase.from("posts").select("title, slug, newsletter_sent_at").not("newsletter_sent_at", "is", null).order("newsletter_sent_at", { ascending: false }).limit(20),
+  ]);
+  if (subErr) throw subErr;
+  if (postErr) throw postErr;
+  return {
+    subscribers: (subs ?? []).map((s) => ({ id: s.id, email: s.email, subscribedAt: s.subscribed_at })),
+    sent: (posts ?? []).map((p) => ({ title: p.title, slug: p.slug, sentAt: p.newsletter_sent_at as string })),
+  };
+}
