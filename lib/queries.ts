@@ -1,6 +1,6 @@
 import { unstable_cache } from 'next/cache';
 import { supabase } from '@/lib/supabase';
-import type { BlogPost, Category } from '@/lib/types';
+import type { Author, BlogPost, Category } from '@/lib/types';
 
 function formatDate(iso: string): string {
   return new Date(iso).toLocaleDateString('ro-RO', {
@@ -26,15 +26,21 @@ function mapPost(row: any): BlogPost {
       bio: row.authors?.bio ?? '',
     },
     date: formatDate(row.published_at),
+    publishedAt: row.published_at,
+    updatedAt: row.updated_at ?? row.published_at,
     readTime: row.read_time ?? 0,
     image: row.image_url ?? '',
     views: row.views ?? 0,
     featured: row.featured ?? false,
+    tags: row.tags ?? [],
   };
 }
 
+// Bump when BlogPost gains fields so cached rows from older deployments are not reused.
+const POST_CACHE_VERSION = 'v2';
+
 const POST_SELECT =
-  'id, slug, title, excerpt, content, published_at, read_time, image_url, views, featured, categories(name, slug), authors(name, avatar_url, bio)';
+  'id, slug, title, excerpt, content, published_at, updated_at, read_time, image_url, views, featured, tags, categories(name, slug), authors(name, avatar_url, bio)';
 
 // ─── Categories ────────────────────────────────────────────────────────────
 
@@ -88,7 +94,7 @@ export const getPosts = unstable_cache(
     if (error) throw error;
     return (data ?? []).map(mapPost);
   },
-  ['getPosts'],
+  ['getPosts', POST_CACHE_VERSION],
   { tags: ['posts'], revalidate: 600 }
 );
 
@@ -105,7 +111,7 @@ export const getFeaturedPost = unstable_cache(
     if (error) throw error;
     return data ? mapPost(data) : null;
   },
-  ['getFeaturedPost'],
+  ['getFeaturedPost', POST_CACHE_VERSION],
   { tags: ['posts'], revalidate: 600 }
 );
 
@@ -121,7 +127,7 @@ export function getRecentPosts(limit = 10): Promise<BlogPost[]> {
       if (error) throw error;
       return (data ?? []).map(mapPost);
     },
-    ['getRecentPosts', String(limit)],
+    ['getRecentPosts', POST_CACHE_VERSION, String(limit)],
     { tags: ['posts'], revalidate: 600 }
   )();
 }
@@ -138,7 +144,7 @@ export function getPopularPosts(limit = 10): Promise<BlogPost[]> {
       if (error) throw error;
       return (data ?? []).map(mapPost);
     },
-    ['getPopularPosts', String(limit)],
+    ['getPopularPosts', POST_CACHE_VERSION, String(limit)],
     { tags: ['posts'], revalidate: 600 }
   )();
 }
@@ -155,7 +161,7 @@ export function getPostBySlug(slug: string): Promise<BlogPost | null> {
       if (error) throw error;
       return data ? mapPost(data) : null;
     },
-    ['getPostBySlug', slug],
+    ['getPostBySlug', POST_CACHE_VERSION, slug],
     { tags: ['posts', `post-${slug}`], revalidate: 3600 }
   )();
 }
@@ -181,7 +187,7 @@ export function getRelatedPosts(currentSlug: string, categorySlug: string): Prom
       if (error) throw error;
       return (data ?? []).map(mapPost);
     },
-    ['getRelatedPosts', currentSlug, categorySlug],
+    ['getRelatedPosts', POST_CACHE_VERSION, currentSlug, categorySlug],
     { tags: ['posts'], revalidate: 3600 }
   )();
 }
@@ -205,7 +211,7 @@ export function getPostsByCategory(categorySlug: string): Promise<BlogPost[]> {
       if (error) throw error;
       return (data ?? []).map(mapPost);
     },
-    ['getPostsByCategory', categorySlug],
+    ['getPostsByCategory', POST_CACHE_VERSION, categorySlug],
     { tags: ['posts', 'categories'], revalidate: 600 }
   )();
 }
@@ -242,4 +248,19 @@ export const getAllPostSlugs = unstable_cache(
   },
   ['getAllPostSlugs'],
   { tags: ['posts'], revalidate: 600 }
+);
+
+// ─── Authors ───────────────────────────────────────────────────────────────
+
+export const getAuthors = unstable_cache(
+  async (): Promise<Author[]> => {
+    const { data, error } = await supabase
+      .from('authors')
+      .select('name, avatar_url, bio')
+      .order('created_at', { ascending: true });
+    if (error) throw error;
+    return (data ?? []).map((a) => ({ name: a.name, avatar: a.avatar_url ?? '', bio: a.bio ?? '' }));
+  },
+  ['getAuthors'],
+  { tags: ['authors'], revalidate: 3600 }
 );

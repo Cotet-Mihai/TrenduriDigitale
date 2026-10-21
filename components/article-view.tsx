@@ -129,11 +129,8 @@ export default function ArticleView({ post, related, canonicalUrl }: ArticleView
           {/* Tags */}
           <div className="flex items-center gap-2 mt-10 pt-6 border-t border-border/60 flex-wrap">
             <span className="text-sm font-medium text-muted-foreground">Etichete:</span>
-            {Array.from(new Set([post.category, "Digital", "2024"])).map((tag) => (
-              <span
-                key={tag}
-                className="text-xs bg-muted px-3 py-1 rounded-full text-muted-foreground hover:bg-muted/80 cursor-pointer transition-colors"
-              >
+            {Array.from(new Set([post.category, ...post.tags].filter(Boolean))).map((tag) => (
+              <span key={tag} className="text-xs bg-muted px-3 py-1 rounded-full text-muted-foreground">
                 {tag}
               </span>
             ))}

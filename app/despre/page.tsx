@@ -3,7 +3,9 @@ import Link from "next/link";
 import { ArrowRight, Zap, Target, Users, BookOpen } from "lucide-react";
 
 import NewsletterSection from "@/components/newsletter-section";
-import { getSiteStats } from "@/lib/queries";
+import { getAuthors, getSiteStats } from "@/lib/queries";
+
+const BASE_URL = "https://trenduridigitale.ro";
 
 export const metadata = {
     title: "Despre noi",
@@ -35,7 +37,22 @@ const values = [
 ];
 
 export default async function DesprePage() {
-    const stats = await getSiteStats();
+    const [stats, authors] = await Promise.all([getSiteStats(), getAuthors()]);
+    const author = authors[0];
+
+    // Articles reference this Person by @id, so search engines and AI answer
+    // engines can attribute every article to a real, described author.
+    const personJsonLd = author && {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": `${BASE_URL}/despre#autor`,
+        name: author.name,
+        url: `${BASE_URL}/despre#autor`,
+        ...(author.avatar && { image: author.avatar.startsWith("http") ? author.avatar : `${BASE_URL}${author.avatar}` }),
+        ...(author.bio && { description: author.bio }),
+        jobTitle: "Fondator și redactor",
+        worksFor: { "@type": "Organization", name: "TrenduriDigitale", url: BASE_URL },
+    };
 
     const statCards = [
         { number: stats.totalViews.toLocaleString("ro-RO"), label: "Vizualizări totale" },
@@ -46,6 +63,12 @@ export default async function DesprePage() {
 
     return (
         <main className="flex-1">
+            {personJsonLd && (
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd).replace(/</g, "\\u003c") }}
+                />
+            )}
             {/* Hero */}
             <section className="bg-muted/30 border-b border-border/40">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
@@ -96,6 +119,31 @@ export default async function DesprePage() {
                     </div>
                 </div>
             </section>
+
+            {/* Author */}
+            {author && (
+                <section id="autor" className="border-t border-border/40 scroll-mt-24">
+                    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                        <h2 className="font-heading text-3xl mb-8 text-center">Cine scrie</h2>
+                        <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 p-6 rounded-2xl border border-border bg-card">
+                            {author.avatar && (
+                                <Image
+                                    src={author.avatar}
+                                    alt={author.name}
+                                    width={112}
+                                    height={112}
+                                    className="size-28 rounded-full object-cover shrink-0"
+                                />
+                            )}
+                            <div className="text-center sm:text-left">
+                                <p className="font-heading text-2xl">{author.name}</p>
+                                <p className="text-sm text-blue-600 font-medium mb-3">Fondator și redactor</p>
+                                {author.bio && <p className="text-muted-foreground leading-relaxed">{author.bio}</p>}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            )}
 
             {/* Values */}
             <section className="border-t border-border/40">

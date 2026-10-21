@@ -13,11 +13,14 @@ export interface BlogPost {
   category: string;
   categorySlug: string;
   author: Author;
-  date: string;
+  date: string; // formatted for display ("15 august 2024")
+  publishedAt: string; // ISO — for metadata/structured data
+  updatedAt: string; // ISO
   readTime: number;
   image: string;
   views: number;
   featured: boolean;
+  tags: string[];
 }
 
 export interface Category {

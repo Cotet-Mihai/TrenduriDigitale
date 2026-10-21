@@ -1,15 +1,18 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState, useTransition } from "react";
+import { useCallback, useDeferredValue, useEffect, useMemo, useRef, useState, useTransition } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { ArrowLeft, Check, ExternalLink, Eye, Loader2, RotateCcw, Star, Trash2, X } from "lucide-react";
 import { deletePost, savePost } from "@/lib/admin-actions";
 import { estimateReadTime, toSlug, type PostInput } from "@/lib/admin";
 import { writePreview } from "@/lib/preview";
+import { analyzeSeo, DESCRIPTION_MAX, DESCRIPTION_MIN, TITLE_MAX } from "@/lib/seo";
+import SeoPanel, { scoreTone } from "@/components/admin/seo-panel";
 import type { BlogPost } from "@/lib/types";
 import MarkdownEditor from "@/components/admin/markdown-editor";
 import CoverImageField from "@/components/admin/cover-image-field";
+import TagsField from "@/components/admin/tags-field";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -44,7 +47,6 @@ interface Backup {
   at: number;
 }
 
-const EXCERPT_IDEAL = 160;
 
 function toLocalInput(iso: string | null): string {
   if (!iso) return "";
@@ -74,10 +76,13 @@ function toPreviewPost(post: PostInput, categories: Option[], authors: AuthorOpt
       month: "long",
       year: "numeric",
     }),
+    publishedAt: post.publishedAt ?? new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
     readTime: post.readTime,
     image: post.imageUrl,
     views: 0,
     featured: post.featured,
+    tags: post.tags,
   };
 }
 
@@ -107,6 +112,23 @@ export default function PostEditor({ initial, categories, authors }: Props) {
   const dirty = snapshot(post) !== savedSnapshot;
   const published = post.status === "published";
   const previewKey = initial.id ?? "new";
+
+  // Deferred so typing stays smooth on long articles.
+  const deferredPost = useDeferredValue(post);
+  const seo = useMemo(
+    () =>
+      analyzeSeo({
+        title: deferredPost.title,
+        slug: deferredPost.slug,
+        excerpt: deferredPost.excerpt,
+        content: deferredPost.content,
+        keyword: deferredPost.focusKeyword,
+        imageUrl: deferredPost.imageUrl,
+        slugIsLive: initial.status === "published" && deferredPost.slug === initial.slug,
+      }),
+    [deferredPost, initial.status, initial.slug]
+  );
+  const seoTone = scoreTone(seo.score);
 
   // Keep the private preview tab in sync with what is on screen, saved or not.
   useEffect(() => {
@@ -171,7 +193,8 @@ export default function PostEditor({ initial, categories, authors }: Props) {
 
   function restoreBackup() {
     if (!backup) return;
-    setPost({ ...backup.post, id: initial.id });
+    // Spread `initial` first so fields added after the backup was written get a value.
+    setPost({ ...initial, ...backup.post, id: initial.id });
     setSlugTouched(true);
     setEditorKey((k) => k + 1); // MDXEditor only reads `markdown` on mount
     setBackup(null);
@@ -287,6 +310,9 @@ export default function PostEditor({ initial, categories, authors }: Props) {
             <span className={cn("text-xs truncate", dirty ? "text-amber-700" : "text-muted-foreground")}>
               {statusLabel}
             </span>
+            <span className={cn("hidden md:inline text-[11px] font-semibold px-2 py-0.5 rounded-full shrink-0", seoTone.className)}>
+              SEO {seo.score}
+            </span>
           </div>
           <div className="flex items-center gap-2 shrink-0">
             <Button variant="ghost" onClick={openPreview} title="Vezi cum arată pagina, fără să publici">
@@ -352,6 +378,15 @@ export default function PostEditor({ initial, categories, authors }: Props) {
               rows={1}
               className="w-full resize-none bg-transparent outline-none font-heading text-3xl sm:text-4xl leading-tight placeholder:text-muted-foreground/50 [field-sizing:content] overflow-hidden pb-1"
             />
+            <p
+              className={cn(
+                "-mt-3 text-xs",
+                post.title.length > TITLE_MAX ? "text-amber-700" : "text-muted-foreground"
+              )}
+            >
+              {post.title.length}/{TITLE_MAX} caractere
+              {post.title.length > TITLE_MAX && " · Google va tăia titlul"}
+            </p>
             <MarkdownEditor key={editorKey} value={post.content} onChange={onContentChange} />
           </div>
 
@@ -369,11 +404,33 @@ export default function PostEditor({ initial, categories, authors }: Props) {
                 placeholder="Una-două fraze care apar sub titlu, pe cardul articolului și în Google."
                 className="w-full rounded-lg border border-input bg-transparent px-2.5 py-2 text-sm outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 resize-y"
               />
-              <p className={cn("text-xs text-right", excerptLength > EXCERPT_IDEAL ? "text-amber-700" : "text-muted-foreground")}>
-                {excerptLength}/{EXCERPT_IDEAL}
-                {excerptLength > EXCERPT_IDEAL && " · Google va tăia textul"}
+              <p
+                className={cn(
+                  "text-xs text-right",
+                  excerptLength >= DESCRIPTION_MIN && excerptLength <= DESCRIPTION_MAX
+                    ? "text-emerald-700"
+                    : excerptLength > DESCRIPTION_MAX
+                      ? "text-amber-700"
+                      : "text-muted-foreground"
+                )}
+              >
+                {excerptLength}/{DESCRIPTION_MAX}
+                {excerptLength > DESCRIPTION_MAX
+                  ? " · Google va tăia textul"
+                  : excerptLength < DESCRIPTION_MIN
+                    ? ` · ideal ${DESCRIPTION_MIN}–${DESCRIPTION_MAX}`
+                    : " · ideal"}
               </p>
             </Panel>
+
+            <SeoPanel
+              report={seo}
+              keyword={post.focusKeyword}
+              onKeywordChange={(value) => update("focusKeyword", value)}
+              title={post.title}
+              slug={post.slug}
+              excerpt={post.excerpt}
+            />
 
             <Panel title="Detalii">
               <Field label="Categorie">
@@ -387,6 +444,10 @@ export default function PostEditor({ initial, categories, authors }: Props) {
                     <option key={c.id} value={c.id}>{c.name}</option>
                   ))}
                 </select>
+              </Field>
+
+              <Field label="Etichete">
+                <TagsField value={post.tags} onChange={(tags) => update("tags", tags)} />
               </Field>
 
               <Field label="Autor">

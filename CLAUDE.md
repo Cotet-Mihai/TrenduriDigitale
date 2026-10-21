@@ -31,7 +31,14 @@ No test suite is configured.
 - Writes go through Server Actions in `lib/admin-actions.ts`, which call `updateTag(...)` + `revalidatePath("/", "layout")` so the public site updates immediately.
 - Editor: MDXEditor (visual, outputs Markdown) in `components/admin/visual-editor-inner.tsx`, loaded client-only. Keep image resizing disabled — it emits raw HTML that the public renderer drops.
 - Images upload from the browser straight to the public Storage bucket `blog-images` (`lib/upload-image.ts`), downscaled to WebP first.
-- Navbar/footer are hidden on `/admin` by `components/site-chrome.tsx`.
+- Navbar/footer are hidden on `/admin` by `components/site-chrome.tsx` (except `/admin/previzualizare`, the private live preview fed from the editor via localStorage — `lib/preview.ts`).
+- SEO checks shown in the editor live in `lib/seo.ts` (pure function, thresholds at the top). `posts.focus_keyword` is admin-only; `posts.tags` is rendered under articles and in OG/JSON-LD.
+
+### SEO / AEO output
+
+- Article pages emit `Article` + `BreadcrumbList` JSON-LD; the author points to the `Person` on `/despre#autor`. Use ISO `publishedAt`/`updatedAt` for machine-readable dates — `date` is a Romanian display string and `new Date()` cannot parse most month names.
+- `app/llms.txt/route.ts` generates `/llms.txt` from published posts.
+- When `BlogPost` gains fields, bump `POST_CACHE_VERSION` in `lib/queries.ts` so stale `unstable_cache` entries are not reused.
 
 ### Route structure
 

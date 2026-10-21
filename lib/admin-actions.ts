@@ -35,6 +35,23 @@ export async function logout(): Promise<void> {
 
 // ─── Posts ─────────────────────────────────────────────────────────────────
 
+const MAX_TAGS = 8;
+
+// Trims, drops empties and case-insensitive duplicates, caps count and length.
+function normalizeTags(tags: string[] | undefined): string[] {
+  const seen = new Set<string>();
+  const out: string[] = [];
+  for (const raw of tags ?? []) {
+    const tag = raw.trim().replace(/\s+/g, " ").slice(0, 40);
+    const key = tag.toLowerCase();
+    if (!tag || seen.has(key)) continue;
+    seen.add(key);
+    out.push(tag);
+    if (out.length === MAX_TAGS) break;
+  }
+  return out;
+}
+
 function invalidatePublicSite(slugs: string[]) {
   updateTag("posts");
   updateTag("categories");
@@ -81,6 +98,8 @@ export async function savePost(
     author_id: input.authorId || null,
     image_url: input.imageUrl || null,
     featured: input.featured,
+    focus_keyword: input.focusKeyword.trim() || null,
+    tags: normalizeTags(input.tags),
     read_time: Math.max(1, Math.round(input.readTime) || 1),
     published_at: publishing ? input.publishedAt ?? new Date().toISOString() : null,
   };

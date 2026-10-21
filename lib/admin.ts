@@ -10,6 +10,8 @@ export interface PostInput {
   authorId: string;
   imageUrl: string;
   featured: boolean;
+  focusKeyword: string;
+  tags: string[];
   readTime: number;
   status: "draft" | "published";
   publishedAt: string | null; // ISO; null on a draft
@@ -30,7 +32,7 @@ export interface AdminPostRow {
 export function toSlug(text: string): string {
   return text
     .normalize("NFD")
-    .replace(/[̀-ͯ]/g, "")
+    .replace(/\p{M}/gu, "")
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "")

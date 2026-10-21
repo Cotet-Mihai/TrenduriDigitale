@@ -29,7 +29,7 @@ export async function getAdminPost(id: string): Promise<PostInput | null> {
   const supabase = await createSupabaseServerClient();
   const { data, error } = await supabase
     .from("posts")
-    .select("id, slug, title, excerpt, content, category_id, author_id, image_url, featured, read_time, published_at")
+    .select("id, slug, title, excerpt, content, category_id, author_id, image_url, featured, focus_keyword, tags, read_time, published_at")
     .eq("id", id)
     .maybeSingle();
   if (error) throw error;
@@ -45,6 +45,8 @@ export async function getAdminPost(id: string): Promise<PostInput | null> {
     authorId: data.author_id ?? "",
     imageUrl: data.image_url ?? "",
     featured: data.featured ?? false,
+    focusKeyword: data.focus_keyword ?? "",
+    tags: data.tags ?? [],
     readTime: data.read_time ?? 1,
     status: data.published_at ? "published" : "draft",
     publishedAt: data.published_at,

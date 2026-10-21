@@ -17,6 +17,8 @@ export default async function NewPostPage() {
     authorId: authors.length === 1 ? authors[0].id : "",
     imageUrl: "",
     featured: false,
+    focusKeyword: "",
+    tags: [],
     readTime: 1,
     status: "draft",
     publishedAt: null,
