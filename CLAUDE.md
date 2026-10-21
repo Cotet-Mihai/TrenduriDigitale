@@ -17,11 +17,21 @@ No test suite is configured.
 
 ## Architecture
 
-**TrenduriDigitale** is a Romanian digital-trends blog built on Next.js App Router (v16) with no backend. All content lives in `lib/data.ts` as static TypeScript arrays — there is no database or CMS.
+**TrenduriDigitale** is a Romanian digital-trends blog built on Next.js App Router (v16) backed by Supabase (Postgres + Auth + Storage).
 
 ### Data layer
 
-`lib/data.ts` exports `BlogPost[]`, `Category[]`, and helper functions (`getPostBySlug`, `getPostsByCategory`, `getRelatedPosts`, `getCategoryBySlug`). Adding or editing articles means editing this file directly.
+- `lib/queries.ts` — public reads via the anon client (`lib/supabase.ts`), wrapped in `unstable_cache` with tags `posts`, `categories`, `post-<slug>`. Only published posts (`published_at IS NOT NULL`) are visible.
+- Article bodies are **Markdown** in `posts.content`, rendered by `components/markdown-content.tsx` (shared by the article page and the admin preview).
+- Schema/RLS: `docs/superpowers/specs/2026-06-05-supabase-database-design.md`; admin changes in `supabase/migrations/`.
+
+### Admin panel (`/admin`)
+
+- Auth: Supabase email/password via `@supabase/ssr` cookies. `proxy.ts` refreshes the session and redirects anonymous users; every admin page/action re-checks with `getAdminUser()` (`lib/supabase-server.ts`), which requires a row in `admin_users`. RLS (`is_admin()`) is the real guard.
+- Writes go through Server Actions in `lib/admin-actions.ts`, which call `updateTag(...)` + `revalidatePath("/", "layout")` so the public site updates immediately.
+- Editor: MDXEditor (visual, outputs Markdown) in `components/admin/visual-editor-inner.tsx`, loaded client-only. Keep image resizing disabled — it emits raw HTML that the public renderer drops.
+- Images upload from the browser straight to the public Storage bucket `blog-images` (`lib/upload-image.ts`), downscaled to WebP first.
+- Navbar/footer are hidden on `/admin` by `components/site-chrome.tsx`.
 
 ### Route structure
 

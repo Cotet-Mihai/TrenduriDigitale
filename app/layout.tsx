@@ -6,6 +6,7 @@ import Footer from "@/components/footer";
 import AnalyticsWrapper from "@/components/analytics-wrapper";
 import CookieBanner from "@/components/cookie-banner";
 import ScrollToTop from "@/components/scroll-to-top";
+import SiteChrome from "@/components/site-chrome";
 import { getCategories } from "@/lib/queries";
 
 const inter = Inter({
@@ -98,10 +99,14 @@ export default async function RootLayout({
       </head>
       <body className="min-h-full flex flex-col">
         <ScrollToTop />
-        <Navbar categories={categories} />
+        <SiteChrome>
+          <Navbar categories={categories} />
+        </SiteChrome>
         {children}
-        <Footer />
-        <CookieBanner />
+        <SiteChrome>
+          <Footer />
+          <CookieBanner />
+        </SiteChrome>
         <AnalyticsWrapper />
       </body>
     </html>

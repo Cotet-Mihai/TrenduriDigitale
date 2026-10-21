@@ -129,3 +129,58 @@
     scroll-behavior: smooth;
   }
 }
+/* ── Admin visual editor (MDXEditor) — mirrors the article typography ── */
+.mdxeditor.td-editor {
+  --baseBg: var(--background);
+  font-family: var(--font-inter), sans-serif;
+}
+.td-editor .td-editor-toolbar {
+  @apply rounded-none border-b border-border/60 bg-background/95 px-2 py-1.5 sticky top-0 z-10 flex-wrap;
+}
+.td-editor .td-editor-content {
+  @apply max-w-3xl mx-auto px-6 py-6 min-h-[60vh] outline-none;
+  font-family: var(--font-inter), sans-serif;
+}
+.td-editor-content p {
+  @apply text-[17px] leading-[1.85] text-foreground/75 my-5 tracking-[0.01em];
+}
+.td-editor-content h2 {
+  @apply font-heading text-2xl font-bold mt-10 mb-4 text-foreground;
+}
+.td-editor-content h3 {
+  @apply font-heading text-xl font-bold mt-8 mb-3 text-foreground;
+}
+.td-editor-content h4 {
+  @apply font-heading text-lg font-semibold mt-6 mb-2 text-foreground;
+}
+.td-editor-content ul {
+  @apply my-6 space-y-2 pl-6 list-disc marker:text-blue-500;
+}
+.td-editor-content ol {
+  @apply my-6 space-y-2 pl-6 list-decimal marker:text-blue-500 marker:font-bold;
+}
+.td-editor-content li {
+  @apply text-[17px] leading-[1.75] text-foreground/75 pl-1;
+}
+.td-editor-content strong,
+.td-editor-content b {
+  @apply font-bold text-foreground;
+}
+.td-editor-content a {
+  @apply text-blue-600 underline decoration-blue-300 underline-offset-2;
+}
+.td-editor-content blockquote {
+  @apply my-8 pl-6 border-l-4 border-blue-500 bg-blue-50/50 py-4 pr-4 rounded-r-xl text-[17px] italic text-foreground/70;
+}
+.td-editor-content img {
+  @apply rounded-xl max-w-full;
+}
+.td-editor-content table {
+  @apply my-8 text-sm;
+}
+.td-editor-content hr {
+  @apply my-10 border-border;
+}
+.td-editor-content code {
+  @apply bg-muted px-1.5 py-0.5 rounded text-[14px] font-mono text-blue-600;
+}

@@ -7,7 +7,7 @@ export default function NotFound() {
       <div className="text-center px-4 py-20">
         <p className="text-8xl font-heading mb-4 text-muted-foreground/30">404</p>
         <h1 className="font-heading text-3xl mb-3">Pagina nu a fost găsită</h1>
-        <p className-="text-muted-foreground text-base mb-8">
+        <p className="text-muted-foreground text-base mb-8">
           Pagina pe care o cauți nu există sau a fost mutată.
         </p>
         <Link

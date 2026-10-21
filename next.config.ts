@@ -11,6 +11,11 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "randomuser.me",
       },
+      {
+        protocol: "https",
+        hostname: "sbwxamcznkchnhpealbv.supabase.co",
+        pathname: "/storage/v1/object/public/**",
+      },
     ],
   },
 };
