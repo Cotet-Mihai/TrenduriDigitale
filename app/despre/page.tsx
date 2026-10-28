@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Zap, Target, Users, BookOpen } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 import NewsletterSection from "@/components/newsletter-section";
 import { getAuthors, getSiteStats } from "@/lib/queries";
@@ -8,33 +8,10 @@ import { getAuthors, getSiteStats } from "@/lib/queries";
 const BASE_URL = "https://trenduridigitale.ro";
 
 export const metadata = {
-    title: "Despre noi",
-    description: "Aflați povestea din spatele TrenduriDigitale — blogul românesc de tech cu sinceritate, fără clickbait și fără artificii.",
+    title: "Despre",
+    description: "Trenduri Digitale este proiectul independent al lui Radu Eftimie: opinii și analize oneste despre tehnologie, cu bune și cu rele.",
     alternates: { canonical: "https://trenduridigitale.ro/despre" },
 };
-
-const values = [
-    {
-        icon: <Target className="w-5 h-5" />,
-        title: "Relevanță",
-        description: "Publicăm doar conținut care aduce valoare reală — nu trafic gol, nu clickbait.",
-    },
-    {
-        icon: <BookOpen className="w-5 h-5" />,
-        title: "Profunzime",
-        description: "Fiecare articol este cercetat, verificat și scris pentru a oferi înțelegere, nu doar informații superficiale.",
-    },
-    {
-        icon: <Users className="w-5 h-5" />,
-        title: "Comunitate",
-        description: "Construim o comunitate de profesioniști și entuziaști digitali care cresc împreună.",
-    },
-    {
-        icon: <Zap className="w-5 h-5" />,
-        title: "Actualitate",
-        description: "Suntem întotdeauna cu un pas înainte — tendințele de mâine, acoperite azi.",
-    },
-];
 
 export default async function DesprePage() {
     const [stats, authors] = await Promise.all([getSiteStats(), getAuthors()]);
@@ -83,10 +60,10 @@ export default async function DesprePage() {
                         />
                     </div>
                     <h1 className="font-heading text-4xl sm:text-5xl mb-5 leading-tight">
-                        Despre Tehnologie, cu bune și cu rele.
+                        Despre Tehnologie, cu bune și cu rele
                     </h1>
                     <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto">
-                        Pe TrenduriDigitale vorbim despre smartphone-uri, tablete, gadgeturi, hardware, internet, Social Media și AI.
+                        Pe Trenduri Digitale vorbesc despre tehnologie, cu bune și cu rele.
                     </p>
                 </div>
             </section>
@@ -95,18 +72,24 @@ export default async function DesprePage() {
             <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     <div>
-                        <h2 className="font-heading text-3xl mb-4">De ce TrenduriDigitale?</h2>
+                        <h2 className="font-heading text-3xl mb-4">De ce Trenduri Digitale?</h2>
                         <p className="text-muted-foreground leading-relaxed mb-4">
-                            Pe lângă noutățile din IT&amp;C, extrem de bine filtrate, partea editorială pe care o considerăm nucleul dur al publicației este compusă din articole de opinie. Ne place să punem lupa pe lucrurile care contează, să întrebăm „de ce", „cum" și „pentru cine", nu doar „cât costă" și „câte megapixeli are".
+                            Te salut! Sunt Radu Eftimie, am peste 25 de ani experiență în presă, sunt specializat în Tehnologia Informației și Comunicații, iar Trenduri Digitale este proiectul meu independent. De ce Independent? Pentru că, într-o lume IT&amp;C sufocată de informație am ales să filtrez un pic lucrurile, ca să putem deosebi fondul de formă.
+                        </p>
+                        <p className="text-muted-foreground leading-relaxed mb-4">
+                            Pun accent pe articole de opinie și analize oneste, dar probabil subiective (!), pun lupa pe ceea ce contează cu adevărat: impactul tehnologiei, „de ce-ul” din spatele inovațiilor și utilitatea lor reală, comparată, întotdeauna, cu ce oferă piața de profil de azi.
+                        </p>
+                        <p className="text-muted-foreground leading-relaxed mb-4">
+                            Cum fac asta? Nu-mi câștig existența așa, deci cred că lucrurile ar trebui să fie clare, pot critica orice cred că merită efortul, pentru că o fac pe banii mei.
                         </p>
                         <p className="text-muted-foreground leading-relaxed mb-6">
-                            Dacă și tu simți că lumea tech a fost deturnată de prea mult marketing, atunci ai ajuns în locul potrivit.
+                            Dacă te-ai săturat de marketing agresiv și vrei opinii tehnice fondate și direct la subiect, uneori formulate dur, bine ai venit!
                         </p>
                         <Link
                             href="/articole"
                             className="inline-flex items-center gap-2 text-blue-600 font-medium hover:underline"
                         >
-                            Explorează articolele noastre <ArrowRight className="w-4 h-4" />
+                            Explorează articolele <ArrowRight className="w-4 h-4" />
                         </Link>
                     </div>
                     <div className="grid grid-cols-2 gap-4">
@@ -144,24 +127,6 @@ export default async function DesprePage() {
                     </div>
                 </section>
             )}
-
-            {/* Values */}
-            <section className="border-t border-border/40">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-                    <h2 className="font-heading text-3xl mb-8 text-center">Valorile noastre</h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-                        {values.map((val) => (
-                            <div key={val.title} className="p-5 rounded-2xl border border-border bg-card">
-                                <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-3">
-                                    {val.icon}
-                                </div>
-                                <h3 className="font-heading text-lg mb-1">{val.title}</h3>
-                                <p className="text-sm text-muted-foreground">{val.description}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
 
             <NewsletterSection />
         </main>
